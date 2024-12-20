@@ -1,0 +1,124 @@
+Site: http://200.19.182.110/
+
+potenciais vulnerabilidades:
+
+#1 Software Desatualizado (nginx, Bootstrap, OpenSSH, MySQL)
+  
+- Descrição: O servidor utiliza versões obsoletas de software, como nginx 1.10.3, OpenSSH 7.2p2 e Bootstrap 3.3.7. Essas versões podem conter vulnerabilidades conhecidas.
+
+- Impacto: Ataques como execução remota de código (RCE), escalonamento de privilégios ou exploração de falhas no front-end devido a vulnerabilidades não corrigidas.
+
+- Mitigação: 
+  - Atualizar todos os componentes para versões mais recentes e mantidas.
+  - Monitorar vulnerabilidades conhecidas (CVE) para essas versões.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.8 (Crítica) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+#2 Cookie Sem Configurações Seguras  
+
+- Descrição: O cookie `csrftoken` não utiliza atributos de segurança como `HttpOnly`, `Secure` e `SameSite`.
+
+- Impacto: Possibilidade de roubo de cookies via ataques de Cross-Site Scripting (XSS) ou durante transmissões não criptografadas.
+
+- Mitigação: 
+  - Configurar os atributos `HttpOnly` (protegendo contra acesso via JavaScript), `Secure` (transmissão apenas em HTTPS) e `SameSite=Strict` ou `Lax` (evitando envio em contextos de terceiros).
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
+
+
+#3 Falta de Cabeçalhos de Segurança 
+
+- Descrição: Cabeçalhos como `Content-Security-Policy (CSP)` e `Strict-Transport-Security (HSTS)` não estão configurados, expondo o site a ataques de XSS e hijacking de sessões.
+
+- Impacto: Ataques XSS podem injetar scripts maliciosos; Falta de HSTS permite ataques man-in-the-middle (MITM) em conexões HTTP.
+
+- Mitigação: 
+  - Implementar `Content-Security-Policy` para controlar fontes de scripts e conteúdos.
+  - Ativar `Strict-Transport-Security` para forçar conexões HTTPS.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 9.8 (Crítica) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#4 Porta MySQL Exposta (3306)
+
+- Descrição: A porta padrão do MySQL está acessível externamente, permitindo possíveis tentativas de força bruta ou exploração de vulnerabilidades do banco de dados.
+
+- Impacto: 
+  - Comprometimento do banco de dados e acesso a informações sensíveis.
+  - Escalonamento de privilégios e execução de comandos SQL maliciosos.
+
+- Mitigação: 
+  - Restringir acesso a esta porta apenas a IPs confiáveis.
+  - Configurar firewalls e sistemas de detecção de intrusões (IDS).
+
+OWASP Top 10: A01:2021-Broken Access Control 
+
+Severidade: 8.8 (Alta) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+#5 Script Bloqueando Navegadores (Chrome)
+  
+- Descrição: Um script JavaScript desabilita a funcionalidade do site em navegadores Chrome, sem justificativa clara. Isso pode ser explorado para criar vulnerabilidades de negação de serviço (DoS).
+
+- Impacto: Usuários legítimos podem ser impedidos de acessar a aplicação. Um atacante pode manipular o script para fins maliciosos.
+
+- Mitigação: 
+  - Remover ou revisar o script para que ele não cause bloqueios injustificados.
+  - Implementar verificações de compatibilidade de navegador no backend.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+
+
+#6 Formulário de Login Sem HTTPS
+  
+- Descrição: O formulário de login pode transmitir credenciais sem criptografia adequada se o site não for servido via HTTPS.
+
+- Impacto: Credenciais podem ser interceptadas em ataques man-in-the-middle (MITM).
+
+- Mitigação: 
+  - Garantir que o site seja acessível apenas via HTTPS.
+  - Configurar redirecionamentos automáticos de HTTP para HTTPS.
+
+OWASP Top 10: A02:2021-Cryptographic Failures 
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#7 Uso de Framework Django sem Verificação de Versão
+
+- Descrição: O relatório não especifica a versão do Django, o que pode indicar uma versão desatualizada ou com vulnerabilidades não corrigidas.
+
+- Impacto: Exploração de vulnerabilidades no framework, como ataques de SQL Injection ou bypass de autenticação.
+
+- Mitigação:
+  - Atualizar o Django para a versão mais recente com suporte.
+  - Monitorar vulnerabilidades conhecidas para a versão em uso.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 8.8 (Alta) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+
+Ações Prioritárias
+
+#1 Atualização de Componentes Desatualizados: Atualizar os softwares identificados com versões obsoletas para mitigar vulnerabilidades conhecidas. Atualizar o servidor nginx, Bootstrap, OpenSSH e MySQL para versões mantidas e seguras. Garantir que o framework Django esteja na última versão estável.
+
+#2 Implementação de HTTPS: Configurar o servidor para que todas as conexões utilizem HTTPS, protegendo dados sensíveis, como credenciais. Instalar e configurar um certificado SSL/TLS (gratuito via Let's Encrypt ou equivalente). Configurar redirecionamentos automáticos de HTTP para HTTPS. Ativar cabeçalhos `Strict-Transport-Security (HSTS)` para garantir conexões seguras.
+
+#3 Configurar Atributos de Segurança nos Cookies. Proteger o cookie `csrftoken` contra acesso indevido e vazamentos. Adicionar os atributos `HttpOnly`, `Secure`, e `SameSite=Strict` ao cookie.
+
+#4 Proteção Contra Exposição de Banco de Dados. Restringir o acesso à porta 3306 (MySQL) para reduzir riscos de comprometimento. Configurar um firewall para bloquear conexões externas à porta 3306. Garantir que o banco de dados só aceite conexões de IPs confiáveis ou via tunelamento seguro (VPN/SSH). Revisar permissões e autenticação no MySQL.
+
+#5 Implementação de Cabeçalhos de Segurança. Adicionar cabeçalhos HTTP essenciais para proteção contra ataques comuns. Configurar `Content-Security-Policy (CSP)` para evitar XSS. Garantir `X-Content-Type-Options: nosniff` e `X-Frame-Options: SAMEORIGIN` para evitar ataques de clickjacking. Reforçar o uso de `Strict-Transport-Security (HSTS)`.
+
+#6 Revisão de Scripts no Front-End. Ajustar ou remover scripts que bloqueiam navegadores como o Chrome. Revisar o script que desabilita a aplicação no Chrome. Garantir que o comportamento seja justificado e não impacte negativamente usuários legítimos. Implementar alternativas compatíveis com múltiplos navegadores.

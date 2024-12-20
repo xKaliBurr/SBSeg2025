@@ -1,0 +1,96 @@
+Site: https://memoria.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Execução Remota de Código (RCE) via Funções PHP
+
+- Descrição: Foi identificado que o servidor web da aplicação permite a execução de funções PHP via entradas fornecidas pelo usuário. Essa vulnerabilidade pode ser explorada por meio da injeção de código malicioso na entrada do sistema, permitindo que um atacante execute comandos no servidor de forma remota.
+
+- Impacto: Caso explorada, essa vulnerabilidade pode permitir que um atacante execute qualquer comando no servidor, comprometendo a integridade dos dados, a confidencialidade das informações e até mesmo a disponibilidade do sistema. O impacto pode ser severo, levando à perda total do controle do sistema.
+
+- Mitigação:  
+  - Utilizar funções seguras para validação e filtragem de entradas.
+  - Desabilitar funções PHP perigosas no arquivo `php.ini` (por exemplo, `eval()`, `exec()`, `system()`, entre outras).
+  - Empregar a técnica de "whitelisting" para limitar as funções permitidas a serem chamadas.
+
+OWASP Top 10: A01:2021-Broken Access Control 
+
+Severidade: 9.8 (Crítica) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#2 Injeção de SQL via Parâmetros de URL
+
+- Descrição: Foi observada a possibilidade de injeção de SQL através dos parâmetros passados na URL. O sistema não valida corretamente os dados fornecidos, permitindo que um atacante insira comandos SQL maliciosos para manipular o banco de dados.
+
+- Impacto: Essa vulnerabilidade pode permitir que um atacante execute comandos arbitrários no banco de dados, resultando em vazamento de dados sensíveis, corrupção ou até destruição do banco de dados. Em alguns casos, pode levar a uma escalada de privilégios, comprometer o sistema e afetar a segurança global da aplicação.
+
+- Mitigação:  
+  - Implementar consultas SQL parametrizadas ou usar ORMs que tratem automaticamente a injeção.
+  - Validar e sanitizar todas as entradas fornecidas pelo usuário.
+  - Configurar a aplicação para tratar erros SQL de maneira adequada, sem expor detalhes internos.
+  
+OWASP Top 10: A03:2021-Injection
+
+Severidade: 9.1 (Crítica) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
+
+  
+#3 Armazenamento de Senhas em Texto Claro
+
+- Descrição: Foi identificado que as senhas dos usuários estão sendo armazenadas sem criptografia adequada, ou seja, em texto claro. Isso torna as credenciais facilmente acessíveis em caso de comprometimento do banco de dados.
+
+- Impacto: Caso o banco de dados seja comprometido, as senhas podem ser facilmente recuperadas e usadas para acessar as contas de usuários, comprometendo a segurança do sistema. Além disso, isso viola práticas recomendadas de segurança e pode resultar em danos à reputação da organização.
+
+- Mitigação:  
+  - Armazenar senhas utilizando algoritmos de hash seguros como bcrypt, scrypt ou Argon2.
+  - Implementar salting nas senhas para aumentar a segurança.
+  - Realizar auditorias de segurança periodicamente para garantir que nenhuma senha esteja sendo armazenada de forma insegura.
+  
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 8.1 (Alta) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
+
+  
+#4 Acesso Indevido a Páginas de Administração
+
+- Descrição:  Foi detectada a ausência de validações adequadas de autorização para acessar páginas de administração da aplicação. O sistema permite que usuários sem privilégios administrativos acessem páginas sensíveis de administração.
+
+- Impacto: Um atacante pode explorar essa falha para obter acesso não autorizado a funcionalidades sensíveis da aplicação, como configuração de sistemas, gerenciamento de usuários e dados críticos. Isso pode resultar em escalada de privilégios, comprometer a integridade do sistema e até mesmo causar danos a dados sensíveis.
+
+- Mitigação:  
+  - Implementar controles de acesso rigorosos, garantindo que apenas usuários com os privilégios necessários possam acessar páginas administrativas.
+  - Usar autenticação multifatorial (MFA) para proteger páginas sensíveis.
+  - Verificar rigorosamente as permissões do usuário antes de permitir o acesso a funcionalidades restritas.
+
+OWASP Top 10: A01:2021-Broken Access Control
+
+Severidade: 8.8 (Alta) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+#5 Falta de Validação de Sessão em APIs
+
+- Descrição: Foi encontrado que algumas APIs não validam adequadamente as sessões de usuário, permitindo que um atacante utilize tokens ou identificadores de sessão falsificados para acessar funcionalidades restritas.
+
+- Impacto: Essa falha pode ser explorada por atacantes para realizar ações em nome de outros usuários ou obter acesso a dados e funcionalidades restritas. Isso pode resultar em roubo de informações sensíveis ou em ações indesejadas no sistema.
+
+- Mitigação:  
+  - Implementar validação de sessão adequada em todas as APIs, incluindo verificação de token de autenticação e escopo de acesso.
+  - Usar HTTPS para proteger o tráfego de dados e prevenir ataques de interceptação.
+  - Adotar técnicas de gerenciamento de sessão seguras, como expiração de tokens e revalidação periódica.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures
+
+Severidade: 9.1  (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+Ações Prioritárias
+
+#1 Implementar Validação e Sanitização de Entradas: Substituir todas as entradas de usuário não validadas por entradas sanitizadas e usar consultas SQL parametrizadas para impedir injeção.
+
+#2 Alterar o Armazenamento de Senhas para Criptografia Adequada: Implementar hashing seguro das senhas com algoritmos como bcrypt, scrypt ou Argon2, além de adicionar "salting" para garantir maior segurança.
+
+#3 Fortalecer os Controles de Acesso nas Páginas de Administração: Implementar validações de acesso rigorosas para proteger páginas de administração e usar autenticação multifatorial (MFA) para aumentar a segurança.
+
+#4 Corrigir Validação de Sessão nas APIs: Garantir que todas as APIs validem adequadamente as sessões de usuário antes de permitir o acesso a dados ou funcionalidades sensíveis.
+
+#5 Desabilitar Funções PHP Perigosas no Servidor: Funções PHP potencialmente perigosas no arquivo de configuração `php.ini` (como `eval()`, `exec()`, `system()`, etc.) e revisar o código para garantir que nenhuma função arriscada seja usada. Essa vulnerabilidade pode ser facilmente explorada para comprometer o servidor.
+

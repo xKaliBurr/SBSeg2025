@@ -1,0 +1,103 @@
+Site: https://si3.ufc.br/sigaa/verTelaLogin.do%3bjsessionid=A6B6BF87D602A0F396CB54B4F62D5821.node22
+
+potenciais vulnerabilidades:
+
+#1 Versão desatualizada do JQuery (1.7.1)
+
+- Descrição: : A versão detectada do JQuery (1.7.1) é muito antiga e possui várias vulnerabilidades conhecidas, como Cross-Site Scripting (XSS) e manipulação inadequada de dados.
+
+- Impacto: Potencial para execução de código JavaScript malicioso (XSS) ou injeção de código em outras áreas da aplicação. Isso pode permitir que um atacante roube dados do usuário ou realize outras ações maliciosas.
+
+- Mitigação:
+ -  Atualizar o JQuery para uma versão mais recente, garantindo que as correções de segurança sejam aplicadas.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+
+
+#2 Insecure HTTP Headers
+
+- Descrição: O servidor responde com headers HTTP padrão, sem especificar cabeçalhos de segurança adequados, como Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, etc.
+
+- Impacto:  A ausência desses headers pode deixar o site vulnerável a ataques como Clickjacking, XSS e MITM (Man-in-the-Middle).
+
+- Mitigação:
+ -  Adicionar cabeçalhos HTTP de segurança recomendados, como Strict-Transport-Security, X-Content-Type-Options, e X-Frame-Options.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 6.8 (Média) CVSS 3.0 AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H
+
+
+#3 Uso de JSESSIONID em Cookies sem flag HttpOnly
+
+- Descrição: O cookie JSESSIONID é usado sem a flag HttpOnly ativada, o que significa que pode ser acessado via JavaScript no navegador.
+
+- Impacto: Potencial para roubo de sessão por meio de ataques como Cross-Site Scripting (XSS), comprometendo a segurança da autenticação do usuário.
+
+- Mitigação:
+ - Configurar o cookie JSESSIONID com a flag HttpOnly para impedir que seja acessado via JavaScript.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures 
+
+Severidade: 7 (Alta) CVSS 3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L
+
+
+#4 Falta de Verificação Adequada de Senha (Dica de Senha)
+
+- Descrição: A página de login contém uma dica explícita sobre a diferenciação de maiúsculas e minúsculas nas senhas, o que pode ajudar um atacante a adivinhar a senha.
+
+- Impacto:  Isso pode levar à enumeração de senhas ou fornecer informações suficientes para um atacante realizar um ataque de força bruta ou adivinhar senhas mais facilmente.
+
+- Mitigação:
+ - Remover a dica de senha ou garantir que as mensagens de erro não revelem informações sobre a complexidade ou formato da senha.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures 
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#5 Subdomínios Não Protegidos
+
+- Descrição: O único subdomínio identificado é www.si3.ufc.br, o que pode indicar uma falta de segurança ou controle sobre outros subdomínios não listados ou expostos.
+
+- Impacto:  Se outros subdomínios estiverem em uso, mas não forem devidamente protegidos, isso pode ser uma vulnerabilidade de segurança, permitindo a exploração de outros recursos não visíveis.
+
+- Mitigação:
+ - Verificar e proteger todos os subdomínios associados ao domínio, aplicando práticas de segurança adequadas, como o uso de TLS/SSL e controles de acesso.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 4.3 (Média) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+
+
+#6 Certificado SSL com Configuração Insegura
+
+- Descrição: O certificado SSL é válido, mas a configuração do servidor pode ser desatualizada ou vulnerável a certos ataques como POODLE ou BEAST se as configurações de criptografia não forem rigorosas.
+
+- Impacto: Ataques que exploram a criptografia do SSL/TLS podem permitir que um atacante capture ou manipule comunicações entre o cliente e o servidor.
+
+- Mitigação:
+ - Atualizar as configurações de TLS, desabilitar protocolos e cifras inseguros e aplicar as melhores práticas de segurança para SSL/TLS.
+
+OWASP Top 10: A02:2021-Cryptographic Failures 
+
+Severidade:  6.5 (Média) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualizar Bibliotecas JavaScript (JQuery). A versão antiga do JQuery (1.7.1) tem várias vulnerabilidades conhecidas, que podem ser exploradas para executar ataques como XSS.
+
+#2 Configuração de Segurança Adequada nos Cabeçalhos HTTP. Adicionar cabeçalhos de segurança recomendados, como Strict-Transport-Security, X-Content-Type-Options, e X-Frame-Options.
+
+#3 Configurar o Cookie JSESSIONID com a Flag HttpOnly
+
+#4 Remover Dica de Senha ou Informações Expostas. Expor informações sobre as senhas pode facilitar ataques de força bruta ou adivinhação de senhas.
+
+#5 Verificar e Proteger Subdomínios. Realizar uma verificação completa de todos os subdomínios e implementar controles de segurança apropriados.
+
+#6 Revisar e Atualizar a Configuração SSL/TLS. A configuração SSL/TLS desatualizada ou insegura pode ser explorada em ataques como POODLE ou BEAST, comprometendo a segurança das comunicações.
+

@@ -1,0 +1,361 @@
+Site: http://cafe-idp.ufc.br/
+Performed at: 17/12/2024 - 10:45:45
+IP: 200.17.41.249
+whatweb:
+WhatWeb report for http://cafe-idp.ufc.br/
+Status    : 301 Moved Permanently
+Title     : 301 Moved Permanently
+IP        : 200.17.41.249
+Country   : BRAZIL, BR
+
+Summary   : Apache, HTTPServer[Apache], RedirectLocation[https://cafe-idp.ufc.br/], Strict-Transport-Security[max-age=31536000], X-Frame-Options[SAMEORIGIN]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache (from server string)
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : https://cafe-idp.ufc.br/ (from location)
+
+[ Strict-Transport-Security ]
+	Strict-Transport-Security is an HTTP header that restricts 
+	a web browser from accessing a website without the security 
+	of the HTTPS protocol. 
+
+	String       : max-age=31536000
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+HTTP Headers:
+	HTTP/1.1 301 Moved Permanently
+	Date: Tue, 17 Dec 2024 13:43:46 GMT
+	Server: Apache
+	X-Frame-Options: SAMEORIGIN
+	Strict-Transport-Security: max-age=31536000
+	Location: https://cafe-idp.ufc.br/
+	Content-Length: 232
+	Connection: close
+	Content-Type: text/html; charset=iso-8859-1
+	
+WhatWeb report for https://cafe-idp.ufc.br/
+Status    : 301 Moved Permanently
+Title     : 301 Moved Permanently
+IP        : 200.17.41.249
+Country   : BRAZIL, BR
+
+Summary   : Apache, HTTPServer[Apache], RedirectLocation[https://www.ufc.br/], Strict-Transport-Security[max-age=31536000], X-Frame-Options[SAMEORIGIN]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache (from server string)
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : https://www.ufc.br/ (from location)
+
+[ Strict-Transport-Security ]
+	Strict-Transport-Security is an HTTP header that restricts 
+	a web browser from accessing a website without the security 
+	of the HTTPS protocol. 
+
+	String       : max-age=31536000
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+HTTP Headers:
+	HTTP/1.1 301 Moved Permanently
+	Date: Tue, 17 Dec 2024 13:43:56 GMT
+	Server: Apache
+	X-Frame-Options: SAMEORIGIN
+	Strict-Transport-Security: max-age=31536000
+	Location: https://www.ufc.br/
+	Content-Length: 227
+	Connection: close
+	Content-Type: text/html; charset=iso-8859-1
+	
+WhatWeb report for https://www.ufc.br/
+Status    : 200 OK
+Title     : Portal da UFC - Universidade Federal do Ceará - Página Inicial
+IP        : 200.17.41.185
+Country   : BRAZIL, BR
+
+Summary   : Apache, Bootstrap, Cookies[c58392a6afe5823150836ac5708bfd7d], Frame, HTTPServer[Apache], HttpOnly[c58392a6afe5823150836ac5708bfd7d], Joomla[3.10.11], JQuery, Meta-Author[Divisão de Portais Universitários], MetaGenerator[Secretaria de Tecnologia da Informação], Open-Graph-Protocol[website][277207333098369], OpenSearch[https://www.ufc.br/component/search/?Itemid=101&amp;format=opensearch], PoweredBy[:], Script[text/javascript]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : c58392a6afe5823150836ac5708bfd7d
+
+[ Frame ]
+	This plugin detects instances of frame and iframe HTML 
+	elements. 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : c58392a6afe5823150836ac5708bfd7d
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ Joomla ]
+	Opensource CMS written in PHP. Aggressive version detection 
+	compares just 5 files, checks for version 1.0.0 up to 3.6.4 
+
+	Version      : 3.10.11
+	Aggressive function available (check plugin file or details).
+	Google Dorks: (1)
+	Website     : http://joomla.org
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name 
+	tag - info: 
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : Divisão de Portais Universitários
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its 
+	value. 
+
+	String       : Secretaria de Tecnologia da Informação
+
+[ Open-Graph-Protocol ]
+	The Open Graph protocol enables you to integrate your Web 
+	pages into the social graph. It is currently designed for 
+	Web pages representing profiles of real-world things . 
+	things like movies, sports teams, celebrities, and 
+	restaurants. Including Open Graph tags on your Web page, 
+	makes your page equivalent to a Facebook Page. 
+
+	Version      : website
+	Module       : 277207333098369
+
+[ OpenSearch ]
+	This plugin identifies open search and extracts the URL. 
+	OpenSearch is a collection of simple formats for the 
+	sharing of search results. 
+
+	String       : https://www.ufc.br/component/search/?Itemid=101&amp;format=opensearch
+
+[ PoweredBy ]
+	This plugin identifies instances of 'Powered by x' text and 
+	attempts to extract the value for x. 
+
+	String       : :
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Tue, 17 Dec 2024 13:44:07 GMT
+	Server: Apache
+	P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+	Expires: Wed, 17 Aug 2005 00:00:00 GMT
+	Last-Modified: Tue, 17 Dec 2024 13:44:08 GMT
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Pragma: no-cache
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 13298
+	Content-Type: text/html; charset=utf-8
+	Set-Cookie: c58392a6afe5823150836ac5708bfd7d=bu4u3803s9gdvniv2tere1kc6u; path=/; HttpOnly
+	Connection: close
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.17.41.0 to 200.17.41.255
+[+] 	 PTR dasr06.npd.ufc.br 200.17.41.3
+[+] 	 PTR mail.suporte.ufc.br 200.17.41.8
+[+] 	 PTR aplic02.npd.ufc.br 200.17.41.12
+[+] 	 PTR npdap1.npd.ufc.br 200.17.41.13
+[+] 	 PTR srvdb.npd.ufc.br 200.17.41.5
+[+] 	 PTR aplic01.npd.ufc.br 200.17.41.11
+[+] 	 PTR mail.sofia.ufc.br 200.17.41.22
+[+] 	 PTR bibapl.npd.ufc.br 200.17.41.29
+[+] 	 PTR bibweb.npd.ufc.br 200.17.41.30
+[+] 	 PTR npd-gw.npd.ufc.br 200.17.41.33
+[+] 	 PTR bdsrh.npd.ufc.br 200.17.41.35
+[+] 	 PTR ufcnx.npd.ufc.br 200.17.41.34
+[+] 	 PTR npds01.npd.ufc.br 200.17.41.39
+[+] 	 PTR npds00.npd.ufc.br 200.17.41.40
+[+] 	 PTR teses.npd.ufc.br 200.17.41.31
+[+] 	 PTR jeri8.ufc.br 200.17.41.28
+[+] 	 PTR Servidor-BD.npd.ufc.br 200.17.41.44
+[+] 	 PTR ufcnt.npd.ufc.br 200.17.41.48
+[+] 	 PTR cici.npd.ufc.br 200.17.41.36
+[+] 	 PTR dpudesenv.sti.ufc.br 200.17.41.49
+[+] 	 PTR pegasus.npd.ufc.br 200.17.41.53
+[+] 	 PTR switch.npd.ufc.br 200.17.41.50
+[+] 	 PTR dpusitius.sti.ufc.br 200.17.41.56
+[+] 	 PTR devel.npd.ufc.br 200.17.41.55
+[+] 	 PTR janis.sti.ufc.br 200.17.41.46
+[+] 	 PTR leonardo.npd.ufc.br 200.17.41.65
+[+] 	 PTR teste.npd.ufc.br 200.17.41.64
+[+] 	 PTR emilia.npd.ufc.br 200.17.41.144
+[+] 	 PTR proxy.ufc.br 200.17.41.179
+[+] 	 PTR cafe-idp.ufc.br 200.17.41.242
+[+] 	 PTR cafe-eid.ufc.br 200.17.41.241
+[+] 	 PTR eduroam.ufc.br 200.17.41.243
+[+] 	 PTR cafe-novo.ufc.br 200.17.41.249
+[+] 	 PTR cafe-shib-novo.ufc.br 200.17.41.248
+[+] 	 PTR cafe-ldap.ufc.br 200.17.41.240
+[+] 35 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for cafe-idp.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 12 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host cafe-idp.ufc.br:80 was resolved.
+* IPv6: (none)
+* IPv4: 200.17.41.249
+*   Trying 200.17.41.249:80...
+* Connected to cafe-idp.ufc.br (200.17.41.249) port 80
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: cafe-idp.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 301 Moved Permanently
+< Date: Tue, 17 Dec 2024 13:43:43 GMT
+< Server: Apache
+< X-Frame-Options: SAMEORIGIN
+< Strict-Transport-Security: max-age=31536000
+< Location: https://cafe-idp.ufc.br/
+< Content-Length: 232
+< Content-Type: text/html; charset=iso-8859-1
+< 
+{ [232 bytes data]
+
+100   232  100   232    0     0  52667      0 --:--:-- --:--:-- --:--:-- 77333
+* Connection #0 to host cafe-idp.ufc.br left intact
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://cafe-idp.ufc.br/">here</a>.</p>
+</body></html>
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://cafe-idp.ufc.br
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   404,301,302,303,403
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+===============================================================
+Finished
+===============================================================
+
+ports:
+80/tcp  open  http     Apache httpd
+443/tcp open  ssl/http Apache httpd
+

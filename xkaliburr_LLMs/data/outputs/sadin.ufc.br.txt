@@ -1,0 +1,253 @@
+Site: https://sadin.ufc.br
+Performed at: 09/12/2024 - 12:32:30
+IP: 200.17.41.46
+whatweb:
+WhatWeb report for https://sadin.ufc.br
+Status    : 302 Found
+Title     : <None>
+IP        : 200.17.41.46
+Country   : BRAZIL, BR
+
+Summary   : Cookies[SADINSESSIONID], HTTPServer[WildFly/10], HttpOnly[SADINSESSIONID], RedirectLocation[https://sadin.ufc.br/login;JSESSIONID=eb848f04-8afb-4f9d-9e4b-ad7463f17c27], X-Powered-By[Undertow/1]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : SADINSESSIONID
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : WildFly/10 (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : SADINSESSIONID
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : https://sadin.ufc.br/login;JSESSIONID=eb848f04-8afb-4f9d-9e4b-ad7463f17c27 (from location)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : Undertow/1 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Date: Mon, 09 Dec 2024 15:30:56 GMT
+	Server: WildFly/10
+	X-Powered-By: Undertow/1
+	Location: https://sadin.ufc.br/login;JSESSIONID=eb848f04-8afb-4f9d-9e4b-ad7463f17c27
+	Content-Length: 0
+	Set-Cookie: SADINSESSIONID=eb848f04-8afb-4f9d-9e4b-ad7463f17c27; Path=/; HttpOnly
+	Connection: close
+	
+WhatWeb report for https://sadin.ufc.br/login;JSESSIONID=eb848f04-8afb-4f9d-9e4b-ad7463f17c27
+Status    : 200 OK
+Title     : SADIN - Sistema de Auditoria Interna
+IP        : 200.17.41.46
+Country   : BRAZIL, BR
+
+Summary   : Bootstrap, Email[ex@abc.xyz], HTTPServer[WildFly/10], Java[2.3], JQuery[3.2.1], PasswordField[password], Script, X-Powered-By[Undertow/1, JSP/2.3]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ Email ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : ex@abc.xyz
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : WildFly/10 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Version      : 3.2.1
+	Website     : http://jquery.com/
+
+[ Java ]
+	Java allows you to play online games, chat with people 
+	around the world, calculate your mortgage interest, and 
+	view images in 3D, just to name a few. It's also integral 
+	to the intranet applications and other e-business solutions 
+	that are the foundation of corporate computing. 
+
+	Version      : 2.3
+	Website     : http://www.java.com/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : Undertow/1, JSP/2.3 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Mon, 09 Dec 2024 15:31:00 GMT
+	Server: WildFly/10
+	X-Powered-By: Undertow/1
+	X-Powered-By: JSP/2.3
+	Content-Type: text/html;charset=ISO-8859-1
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 994
+	Connection: close
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.17.41.0 to 200.17.41.255
+[+] 	 PTR dasr06.npd.ufc.br 200.17.41.3
+[+] 	 PTR mail.suporte.ufc.br 200.17.41.8
+[+] 	 PTR srvdb.npd.ufc.br 200.17.41.5
+[+] 	 PTR aplic02.npd.ufc.br 200.17.41.12
+[+] 	 PTR npdap1.npd.ufc.br 200.17.41.13
+[+] 	 PTR mail.sofia.ufc.br 200.17.41.22
+[+] 	 PTR jeri8.ufc.br 200.17.41.28
+[+] 	 PTR bibapl.npd.ufc.br 200.17.41.29
+[+] 	 PTR teses.npd.ufc.br 200.17.41.31
+[+] 	 PTR bibweb.npd.ufc.br 200.17.41.30
+[+] 	 PTR ufcnx.npd.ufc.br 200.17.41.34
+[+] 	 PTR npd-gw.npd.ufc.br 200.17.41.33
+[+] 	 PTR bdsrh.npd.ufc.br 200.17.41.35
+[+] 	 PTR cici.npd.ufc.br 200.17.41.36
+[+] 	 PTR npds01.npd.ufc.br 200.17.41.39
+[+] 	 PTR npds00.npd.ufc.br 200.17.41.40
+[+] 	 PTR janis.sti.ufc.br 200.17.41.46
+[+] 	 PTR Servidor-BD.npd.ufc.br 200.17.41.44
+[+] 	 PTR dpudesenv.sti.ufc.br 200.17.41.49
+[+] 	 PTR ufcnt.npd.ufc.br 200.17.41.48
+[+] 	 PTR switch.npd.ufc.br 200.17.41.50
+[+] 	 PTR devel.npd.ufc.br 200.17.41.55
+[+] 	 PTR pegasus.npd.ufc.br 200.17.41.53
+[+] 	 PTR dpusitius.sti.ufc.br 200.17.41.56
+[+] 	 PTR teste.npd.ufc.br 200.17.41.64
+[+] 	 PTR leonardo.npd.ufc.br 200.17.41.65
+[+] 	 PTR aplic01.npd.ufc.br 200.17.41.11
+[+] 	 PTR emilia.npd.ufc.br 200.17.41.144
+[+] 	 PTR proxy.ufc.br 200.17.41.179
+[+] 	 PTR cafe-ldap.ufc.br 200.17.41.240
+[+] 	 PTR cafe-eid.ufc.br 200.17.41.241
+[+] 	 PTR cafe-idp.ufc.br 200.17.41.242
+[+] 	 PTR eduroam.ufc.br 200.17.41.243
+[+] 	 PTR cafe-novo.ufc.br 200.17.41.249
+[+] 	 PTR cafe-shib-novo.ufc.br 200.17.41.248
+[+] 35 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for sadin.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 21 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host sadin.ufc.br:443 was resolved.
+* IPv6: (none)
+* IPv4: 200.17.41.46
+*   Trying 200.17.41.46:443...
+* GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+* SSL connection using TLS1.2 / ECDHE_RSA_AES_256_GCM_SHA384
+*   server certificate verification SKIPPED
+*   server certificate status verification SKIPPED
+*   common name: *.ufc.br (matched)
+*   server certificate expiration date OK
+*   server certificate activation date OK
+*   certificate public key: RSA
+*   certificate version: #3
+*   subject: C=BR,ST=CEARA,L=Fortaleza,O=UNIVERSIDADE FEDERAL DO CEARA,CN=*.ufc.br
+*   start date: Thu, 25 Jul 2024 19:41:02 GMT
+*   expire date: Tue, 26 Aug 2025 19:41:01 GMT
+*   issuer: C=BR,O=Rede Nacional de Ensino e Pesquisa - RNP,CN=RNP ICPEdu OV SSL CA 2019
+* ALPN: server did not agree on a protocol. Uses default.
+* Connected to sadin.ufc.br (200.17.41.46) port 443
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: sadin.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 302 Found
+< Date: Mon, 09 Dec 2024 15:30:53 GMT
+< Server: WildFly/10
+< X-Powered-By: Undertow/1
+< Location: https://sadin.ufc.br/login;JSESSIONID=c30be657-8ea7-43b1-b09c-39605b6956c7
+< Content-Length: 0
+< Set-Cookie: SADINSESSIONID=c30be657-8ea7-43b1-b09c-39605b6956c7; Path=/; HttpOnly
+< 
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host sadin.ufc.br left intact
+
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://sadin.ufc.br
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   301,302,303,403,404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/login                (Status: 200) [Size: 3466]
+[ERROR] Get "https://sadin.ufc.br/85224": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+===============================================================
+Finished
+===============================================================
+
+ports:
+80/tcp  open  http     Apache httpd
+443/tcp open  ssl/http Apache httpd
+

@@ -1,0 +1,134 @@
+site: https://sadin.ufc.br
+
+potenciais vulnerabilidades:
+
+#1 Sessões Expostas na URL
+
+- Descrição: A aplicação utiliza o parâmetro `JSESSIONID` na URL para gerenciar sessões, o que é considerado inseguro. URLs podem ser armazenadas em históricos de navegação, logs de servidores ou enviadas como referrer em links externos.
+
+- Impacto: Exposição de sessões pode levar ao Roubo de Sessão e à possibilidade de Sequestro de Contas.
+
+- Mitigação:
+  - Implementar cookies de sessão seguros (`Secure`, `HttpOnly` e `SameSite`).
+  - Evitar passar IDs de sessão pela URL.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures 
+
+Severidade: 6.5 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#2 Uso de Tecnologias com Versões Potencialmente Obsoletas
+
+- Descrição:
+  - Tecnologias identificadas:
+  - Java 2.3: Versões antigas podem conter vulnerabilidades conhecidas (Exploits).
+  - jQuery 3.2.1: Esta versão foi lançada em 2017 e pode estar exposta a vulnerabilidades como Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF).
+
+- Impacto: Exploração de vulnerabilidades conhecidas nessas versões pode permitir execução de código arbitrário, XSS ou até mesmo escalonamento de privilégios.
+
+- Mitigação:
+  - Atualizar para versões suportadas e corrigidas de todas as bibliotecas e frameworks.
+  - Realizar testes de compatibilidade antes de atualizar.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 8.6 (Alta) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
+
+
+#3 Implementação SSL Parcial
+
+- Descrição:
+  - O certificado SSL está configurado corretamente, mas o cabeçalho `Strict-Transport-Security (HSTS)` não foi detectado.
+  - A ausência de suporte a ALPN (Application-Layer Protocol Negotiation) pode causar incompatibilidades em conexões HTTPS modernas.
+
+- Impacto: Sem HSTS, o site pode estar vulnerável a **ataques de downgrade**, como o **SSL Strip**, que força a conexão a ser feita por HTTP não seguro.
+
+- Mitigação:
+  - Configurar HSTS no servidor para forçar conexões seguras.
+  - Garantir que o suporte ALPN seja implementado, especialmente para navegadores modernos.
+  
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 6.8 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+  
+#4 Exposição de E-mails
+
+- Descrição: O e-mail ex@abc.xyz foi detectado no código-fonte.
+
+- Impacto: E-mails expostos podem ser utilizados para phishing ou incluídos em listas de spam.
+
+- Mitigação:
+  - Substituir e-mails visíveis por formulários de contato ou ofuscar os endereços.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 4.3 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#5 Timeouts e Possível Falha de Disponibilidade
+
+- Descrição: Durante o processo Varredura de Diretórios, a ferramenta Gobuster relatou um timeout ao tentar acessar um endpoint.
+
+- Impacto: Isso pode indicar lentidão no servidor, limitações de resposta ou até mecanismos de proteção inadequados contra ataques de força bruta.
+
+- Mitigação:
+  - Analisar logs do servidor para identificar gargalos ou falhas de configuração.
+  - Implementar mecanismos de proteção como rate limiting e WAF (Web Application Firewall).
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures
+
+Severidade: 5.0 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L
+
+
+#6 Cookies Sem Flag "Secure"
+
+- Descrição: Embora a flag `HttpOnly` tenha sido configurada no cookie `SADINSESSIONID`, a flag `Secure` não foi detectada.
+
+- Impacto: Sem `Secure`, os cookies podem ser transmitidos em conexões HTTP não seguras, aumentando o risco de sequestro de sessão.
+
+- Mitigação:
+  - Configurar a flag `Secure` para garantir que os cookies sejam transmitidos apenas em conexões HTTPS.
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 5.9 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N 
+
+
+#7 Exposição de Diretórios e Páginas Potencialmente Sensíveis
+
+- Descrição: O endpoint `/login` foi identificado, mas não houve detecção de outros diretórios. Isso pode indicar: Diretórios protegidos, porém sem validação adequada. Páginas sensíveis ocultas, mas acessíveis diretamente por URL.
+  
+- Impacto: Diretórios mal configurados podem expor dados sensíveis ou funcionalidades administrativas.
+
+- Mitigação:
+  - Revisar permissões de acesso no servidor.
+  - Proteger endpoints sensíveis com autenticação e autorização adequadas, como exemplo autenticações de Multiplo Fator.
+
+OWASP Top 10: A04:2021-Insecure Design
+
+Severidade: 6.4 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
+
+
+#8 Servidor de Aplicação Identificado
+
+- Descrição: A versão WildFly/10 foi identificada como servidor de aplicação.
+
+- Impacto: Como se trata possívelmente de um recurso importante, caso essa versão do servidor não esteja atualizada, ela pode conter vulnerabilidades críticas conhecidas.
+
+- Mitigação:
+  - Atualizar o WildFly para a versão mais recente e aplicar patches de segurança recomendados pelo fornecedor.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 7.5 (Alta) CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+
+Ações Prioritárias
+#1 Configurar cookies com as flags `Secure`, `HttpOnly` e `SameSite`.
+#2 Atualizar tecnologias obsoletas, como jQuery e Java.
+#3 Implementar HSTS no servidor para reforçar o uso de HTTPS.
+#4 Revisar endpoints sensíveis, garantindo autenticação forte e criptografia de dados.
+#5 Realizar um Pentest, uma análise completa de vulnerabilidades com ferramentas específicas (como OWASP ZAP ou Burp Suite) para identificar falhas adicionais.
+

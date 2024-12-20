@@ -1,0 +1,102 @@
+Site: https://servicos.sti.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Exposição de Informações Sensíveis (E-mails)
+
+- Descrição:  O e-mail sales@bestpractical.com foi identificado no site, o que pode indicar uma possível exposição de informações sensíveis ou um endereço de e-mail vulnerável.
+
+- Impacto: Potencial para ataques de phishing, engenharia social, ou outros tipos de abusos envolvendo o e-mail exposto.
+
+- Mitigação:
+ - Remover e-mails sensíveis ou implementá-los de forma mascarada, por exemplo, com JavaScript para ocultar o e-mail dos crawlers.
+
+OWASP Top 10: A02:2021-Cryptographic Failures 
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#2 Vulnerabilidade no Campo de Senha (Nome do Campo "pass")
+
+- Descrição: O campo de senha identificado com o nome "pass" pode ser um alvo fácil para ataques automatizados de força bruta ou adivinhação de senha.
+
+- Impacto: Risco de acesso não autorizado ao sistema de autenticação, especialmente se houver políticas fracas de senha.
+
+- Mitigação:
+ - Renomear o campo de senha para algo menos óbvio e implementar mecanismos de segurança como autenticação multifator (MFA).
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures
+
+Severidade: 6.3 (Média) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+
+
+#3 Uso de Conteúdo Não Seguro (Política CSP e Permissões de 'unsafe-inline')
+
+- Descrição:  A política Content-Security-Policy (CSP) permite permissões como 'unsafe-inline' e 'unsafe-eval', que podem permitir a execução de código malicioso em contextos específicos.
+
+- Impacto: Aumento da superfície de ataque, permitindo a execução de scripts maliciosos, como ataques de Cross-Site Scripting (XSS).
+
+- Mitigação:
+ - Reforçar a política CSP para evitar o uso de 'unsafe-inline' e 'unsafe-eval' e realizar auditorias regulares dos scripts carregados na página.
+
+OWASP Top 10: A03:2021-Injection
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+
+
+#4 Falta de Proteção Adequada em Cookies (HttpOnly Sem Secure)
+
+- Descrição: O cookie RT_SID_servicos.sti.ufc.br.443 está marcado como HttpOnly, mas a falta de uma flag Secure pode permitir que o cookie seja transmitido por uma conexão não segura, expondo-o a ataques como o Man-in-the-Middle (MitM).
+
+- Impacto: Risco de interceptação de cookies em conexões HTTP, levando ao roubo de sessões ou informações sensíveis.
+
+- Mitigação:
+ - Garantir que o cookie HttpOnly também tenha a flag Secure para garantir que ele só seja transmitido via conexões HTTPS.
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 6.8 (Média) CVSS 3.0 AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H
+
+
+#5 Versão Desatualizada do Request Tracker (RT)
+
+- Descrição: O site utiliza o Request Tracker (RT) versão 4.4.2, uma versão que pode conter vulnerabilidades conhecidas.
+
+- Impacto: A versão desatualizada do RT pode ser suscetível a ataques de exploração remota ou local, comprometendo a funcionalidade do sistema ou expondo dados sensíveis.
+
+- Mitigação:
+ - Atualizar para uma versão mais recente do RT que tenha corrigido vulnerabilidades conhecidas.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 7.0 (Alta) CVSS 3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:L
+
+
+#6 Cabeçalhos de Segurança Inadequados ou Não Testados
+
+- Descrição: A configuração de cabeçalhos como Permissions-Policy, X-Content-Type-Options, e Referrer-Policy pode não ser totalmente eficaz se não for testada ou configurada corretamente.
+
+- Impacto: Falhas na configuração de cabeçalhos de segurança podem resultar na ativação de funcionalidades desnecessárias ou vulnerabilidades em aplicativos web.
+
+- Mitigação:
+ - Testar e validar regularmente as políticas de cabeçalhos de segurança e revisar as permissões para garantir que apenas funcionalidades essenciais sejam ativadas.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 6.5 (Média) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualização do Request Tracker (RT). A versão 4.4.2 pode conter vulnerabilidades conhecidas que podem ser exploradas por atacantes, comprometendo a integridade do sistema.
+
+#2 Fortalecimento da Política Content-Security-Policy (CSP). Reduzir o risco de Cross-Site Scripting (XSS) e de execução de código malicioso no navegador do usuário.
+
+#3 Implementação da Flag Secure nos Cookies HttpOnly. Impedir que os cookies sejam interceptados em conexões não seguras, prevenindo ataques como Man-in-the-Middle (MitM).
+
+#4 Revisão e Mascaramento de E-mails Expostos. Remover ou mascarar e-mails sensíveis detectados, como o sales@bestpractical.com, para impedir a exposição direta a crawlers e ataques de phishing.
+
+#5 Refatoração do Nome do Campo de Senha. Prevenir ataques automatizados, como força bruta e adivinhação de senhas, que se aproveitam de nomes óbvios.
+
+

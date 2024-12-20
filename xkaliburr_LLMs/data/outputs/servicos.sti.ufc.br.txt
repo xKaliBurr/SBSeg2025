@@ -1,0 +1,524 @@
+Site: https://servicos.sti.ufc.br/
+Performed at: 17/12/2024 - 14:56:04
+IP: 200.19.190.41
+whatweb:
+WhatWeb report for https://servicos.sti.ufc.br/
+Status    : 200 OK
+Title     : Login
+IP        : 200.19.190.41
+Country   : BRAZIL, BR
+
+Summary   : Apache, Cookies[RT_SID_servicos.sti.ufc.br.443], Email[sales@bestpractical.com], HTML5, HTTPServer[Apache], HttpOnly[RT_SID_servicos.sti.ufc.br.443], PasswordField[pass], Request-Tracker[4.4.2], Script[text/javascript], Strict-Transport-Security[max-age=31536000; includeSubDomains; preload], UncommonHeaders[referrer-policy,x-content-type-options,content-security-policy,permissions-policy,upgrade], X-Frame-Options[SAMEORIGIN], X-UA-Compatible[IE=edge]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : RT_SID_servicos.sti.ufc.br.443
+
+[ Email ]
+	Extract email addresses. Find valid email address and 
+	syntactically invalid email addresses from mailto: link 
+	tags. We match syntactically invalid links containing 
+	mailto: to catch anti-spam email addresses, eg. bob at 
+	gmail.com. This uses the simplified email regular 
+	expression from 
+	http://www.regular-expressions.info/email.html for valid 
+	email address matching. 
+
+	String       : sales@bestpractical.com
+	String       : sales@bestpractical.com
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : RT_SID_servicos.sti.ufc.br.443
+
+[ PasswordField ]
+	find password fields 
+
+	String       : pass (from field name)
+
+[ Request-Tracker ]
+	Request Tracker (RT) is an open-source issue tracking 
+	system which thousands of organizations use for bug 
+	tracking, help desk ticketing, customer service, workflow 
+	processes, change management, network operations, youth 
+	counselling and even more. 
+
+	Version      : 4.4.2
+	Version      : 4.4.2
+	Google Dorks: (1)
+	Website     : http://bestpractical.com/rtfm/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+[ Strict-Transport-Security ]
+	Strict-Transport-Security is an HTTP header that restricts 
+	a web browser from accessing a website without the security 
+	of the HTTPS protocol. 
+
+	String       : max-age=31536000; includeSubDomains; preload
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : referrer-policy,x-content-type-options,content-security-policy,permissions-policy,upgrade (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Tue, 17 Dec 2024 16:56:07 GMT
+	Server: Apache
+	Set-Cookie: RT_SID_servicos.sti.ufc.br.443=d703f0925eae65fcb8aa9a69487b2735; path=/; HttpOnly
+	Cache-control: no-cache
+	Pragma: no-cache
+	X-Frame-Options: SAMEORIGIN
+	Referrer-Policy: strict-origin-when-cross-origin
+	X-Content-Type-Options: nosniff
+	Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+	Content-Security-Policy: default-src https://servicos.sti.ufc.br data: 'unsafe-inline' 'unsafe-eval'; script-src https://servicos.sti.ufc.br 'unsafe-inline' 'unsafe-eval' https://rt.ufc.br https://servicos.ufc.br; style-src https://servicos.sti.ufc.br 'unsafe-inline' 'unsafe-eval' https://rt.ufc.br https://servicos.sti.ufc.br; img-src https://servicos.sti.ufc.br https://rt.ufc.br https://servicos.ufc.br; frame-ancestors https://servicos.sti.ufc.br; object-src 'none'; base-uri https://servicos.sti.ufc.br; form-action https://servicos.sti.ufc.br
+	Permissions-Policy: interest-cohort=(), accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=*, geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()
+	Upgrade: h2
+	Connection: Upgrade, close
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Transfer-Encoding: chunked
+	Content-Type: text/html; charset=utf-8
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.19.190.0 to 200.19.190.255
+[+] 	 PTR dante.ufc.br 200.19.190.4
+[+] 	 PTR taiba.ufc.br 200.19.190.1
+[+] 	 PTR sheila.ufc.br 200.19.190.3
+[+] 	 PTR www2.ufc.br 200.19.190.7
+[+] 	 PTR jeri5.ufc.br 200.19.190.12
+[+] 	 PTR jeri0.ufc.br 200.19.190.6
+[+] 	 PTR jeri3.ufc.br 200.19.190.10
+[+] 	 PTR correio1.ufc.br 200.19.190.8
+[+] 	 PTR correio3.ufc.br 200.19.190.9
+[+] 	 PTR mel.ufc.br 200.19.190.2
+[+] 	 PTR jeri4.ufc.br 200.19.190.11
+[+] 	 PTR correio5.ufc.br 200.19.190.13
+[+] 	 PTR jeri6.ufc.br 200.19.190.14
+[+] 	 PTR jeri8.ufc.br 200.19.190.18
+[+] 	 PTR jeri9.ufc.br 200.19.190.19
+[+] 	 PTR icapui.ufc.br 200.19.190.24
+[+] 	 PTR linha27.ufc.br 200.19.190.27
+[+] 	 PTR linha28.ufc.br 200.19.190.28
+[+] 	 PTR mucuripe.ufc.br 200.19.190.30
+[+] 	 PTR linha32.ufc.br 200.19.190.32
+[+] 	 PTR linha25.ufc.br 200.19.190.25
+[+] 	 PTR linha26.ufc.br 200.19.190.26
+[+] 	 PTR linha29.ufc.br 200.19.190.29
+[+] 	 PTR linha40.ufc.br 200.19.190.40
+[+] 	 PTR linha33.ufc.br 200.19.190.33
+[+] 	 PTR linha35.ufc.br 200.19.190.35
+[+] 	 PTR correio15.ufc.br 200.19.190.34
+[+] 	 PTR linha36.ufc.br 200.19.190.36
+[+] 	 PTR linha38.ufc.br 200.19.190.38
+[+] 	 PTR linha37.ufc.br 200.19.190.37
+[+] 	 PTR linha39.ufc.br 200.19.190.39
+[+] 	 PTR servicos.sti.ufc.br 200.19.190.41
+[+] 	 PTR linha45.ufc.br 200.19.190.45
+[+] 	 PTR linha44.ufc.br 200.19.190.44
+[+] 	 PTR linha46.ufc.br 200.19.190.46
+[+] 	 PTR linha49.ufc.br 200.19.190.49
+[+] 	 PTR linha50.ufc.br 200.19.190.50
+[+] 	 PTR linha47.ufc.br 200.19.190.47
+[+] 	 PTR linha48.ufc.br 200.19.190.48
+[+] 	 PTR linha51.ufc.br 200.19.190.51
+[+] 	 PTR linha52.ufc.br 200.19.190.52
+[+] 	 PTR linha53.ufc.br 200.19.190.53
+[+] 	 PTR linha54.ufc.br 200.19.190.54
+[+] 	 PTR linha59.ufc.br 200.19.190.59
+[+] 	 PTR linha55.ufc.br 200.19.190.55
+[+] 	 PTR linha56.ufc.br 200.19.190.56
+[+] 	 PTR linha57.ufc.br 200.19.190.57
+[+] 	 PTR linha58.ufc.br 200.19.190.58
+[+] 	 PTR linha61.ufc.br 200.19.190.61
+[+] 	 PTR si3.ufc.br 200.19.190.65
+[+] 	 PTR linha60.ufc.br 200.19.190.60
+[+] 	 PTR linha62.ufc.br 200.19.190.62
+[+] 	 PTR linha64.ufc.br 200.19.190.64
+[+] 	 PTR linha66.ufc.br 200.19.190.66
+[+] 	 PTR linha67.ufc.br 200.19.190.67
+[+] 	 PTR linha68.ufc.br 200.19.190.68
+[+] 	 PTR linha69.ufc.br 200.19.190.69
+[+] 	 PTR linha72.ufc.br 200.19.190.72
+[+] 	 PTR linha73.ufc.br 200.19.190.73
+[+] 	 PTR teste.ufca.br 200.19.190.70
+[+] 	 PTR linha71.ufc.br 200.19.190.71
+[+] 	 PTR linha78.ufc.br 200.19.190.78
+[+] 	 PTR linha74.ufc.br 200.19.190.74
+[+] 	 PTR linha75.ufc.br 200.19.190.75
+[+] 	 PTR linha76.ufc.br 200.19.190.76
+[+] 	 PTR linha77.ufc.br 200.19.190.77
+[+] 	 PTR linha81.ufc.br 200.19.190.81
+[+] 	 PTR linha79.ufc.br 200.19.190.79
+[+] 	 PTR linha80.ufc.br 200.19.190.80
+[+] 	 PTR linha84.ufc.br 200.19.190.84
+[+] 	 PTR linha82.ufc.br 200.19.190.82
+[+] 	 PTR linha85.ufc.br 200.19.190.85
+[+] 	 PTR linha87.ufc.br 200.19.190.87
+[+] 	 PTR linha86.ufc.br 200.19.190.86
+[+] 	 PTR linha89.ufc.br 200.19.190.89
+[+] 	 PTR linha90.ufc.br 200.19.190.90
+[+] 	 PTR linha102.ufc.br 200.19.190.102
+[+] 	 PTR paraiso.ufc.br 200.19.190.100
+[+] 	 PTR linha101.ufc.br 200.19.190.101
+[+] 	 PTR linha105.ufc.br 200.19.190.105
+[+] 	 PTR linha103.ufc.br 200.19.190.103
+[+] 	 PTR linha104.ufc.br 200.19.190.104
+[+] 	 PTR jeri7.ufc.br 200.19.190.17
+[+] 	 PTR linha106.ufc.br 200.19.190.106
+[+] 	 PTR linha107.ufc.br 200.19.190.107
+[+] 	 PTR linha108.ufc.br 200.19.190.108
+[+] 	 PTR linha111.ufc.br 200.19.190.111
+[+] 	 PTR linha109.ufc.br 200.19.190.109
+[+] 	 PTR linha112.ufc.br 200.19.190.112
+[+] 	 PTR linha114.ufc.br 200.19.190.114
+[+] 	 PTR mucuripe.ufc.br 200.19.190.110
+[+] 	 PTR linha31.ufc.br 200.19.190.31
+[+] 	 PTR linha113.ufc.br 200.19.190.113
+[+] 	 PTR linha118.ufc.br 200.19.190.118
+[+] 	 PTR linha119.ufc.br 200.19.190.119
+[+] 	 PTR linha115.ufc.br 200.19.190.115
+[+] 	 PTR linha116.ufc.br 200.19.190.116
+[+] 	 PTR linha42.ufc.br 200.19.190.42
+[+] 	 PTR linha43.ufc.br 200.19.190.43
+[+] 	 PTR linha117.ufc.br 200.19.190.117
+[+] 	 PTR linha63.ufc.br 200.19.190.63
+[+] 	 PTR linha83.ufc.br 200.19.190.83
+[+] 	 PTR linha88.ufc.br 200.19.190.88
+[+] 	 PTR sirius.nutec.ce.gov.br 200.19.190.173
+[+] 104 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for servicos.sti.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 12 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host servicos.sti.ufc.br:443 was resolved.
+* IPv6: 2001:12f0:784::190:41
+* IPv4: 200.19.190.41
+*   Trying [2001:12f0:784::190:41]:443...
+*   Trying 200.19.190.41:443...
+* GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+* SSL connection using TLS1.2 / ECDHE_RSA_AES_128_GCM_SHA256
+*   server certificate verification SKIPPED
+*   server certificate status verification SKIPPED
+*   common name: *.sti.ufc.br (matched)
+*   server certificate expiration date OK
+*   server certificate activation date OK
+*   certificate public key: RSA
+*   certificate version: #3
+*   subject: C=BR,ST=CEARA,L=Fortaleza,O=UNIVERSIDADE FEDERAL DO CEARA,CN=*.sti.ufc.br
+*   start date: Fri, 26 Jul 2024 00:21:08 GMT
+*   expire date: Wed, 27 Aug 2025 00:21:07 GMT
+*   issuer: C=BR,O=Rede Nacional de Ensino e Pesquisa - RNP,CN=RNP ICPEdu OV SSL CA 2019
+* ALPN: server accepted http/1.1
+* Connected to servicos.sti.ufc.br (200.19.190.41) port 443
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: servicos.sti.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Tue, 17 Dec 2024 16:56:05 GMT
+< Server: Apache
+< Set-Cookie: RT_SID_servicos.sti.ufc.br.443=f1beb9c06d8ce74f7c1d78e93406b877; path=/; HttpOnly
+< Cache-control: no-cache
+< Pragma: no-cache
+< X-Frame-Options: SAMEORIGIN
+< Referrer-Policy: strict-origin-when-cross-origin
+< X-Content-Type-Options: nosniff
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Security-Policy: default-src https://servicos.sti.ufc.br data: 'unsafe-inline' 'unsafe-eval'; script-src https://servicos.sti.ufc.br 'unsafe-inline' 'unsafe-eval' https://rt.ufc.br https://servicos.ufc.br; style-src https://servicos.sti.ufc.br 'unsafe-inline' 'unsafe-eval' https://rt.ufc.br https://servicos.sti.ufc.br; img-src https://servicos.sti.ufc.br https://rt.ufc.br https://servicos.ufc.br; frame-ancestors https://servicos.sti.ufc.br; object-src 'none'; base-uri https://servicos.sti.ufc.br; form-action https://servicos.sti.ufc.br
+< Permissions-Policy: interest-cohort=(), accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=*, geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=(), gamepad=(), serial=()
+< Upgrade: h2
+< Connection: Upgrade
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=utf-8
+< 
+{ [6 bytes data]
+
+100  5424    0  5424    0     0   6190      0 --:--:-- --:--:-- --:--:--  6191
+100  5424    0  5424    0     0   6190      0 --:--:-- --:--:-- --:--:--  6191
+* Connection #0 to host servicos.sti.ufc.br left intact
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- The X-UA-Compatible <meta> tag above must be very early in <head> -->
+
+
+<script>
+window.RT = {};
+RT.CurrentUser = {};
+RT.Config      = {"MessageBoxRichTextHeight":200,"rtname":"servicos.sti.ufc.br","WebPath":"","MessageBoxRichText":1,"MessageBoxUseSystemContextMenu":0};
+
+RT.I18N = {};
+RT.I18N.Catalog = {"history_scroll_error":"Could not load ticket history. Reason:","shortcut_help_error":"Unable to open shortcut help. Reason:","check":"Check","attachment_warning_regex":"\\b(re)?attach","error":"Error","quote_in_filename":"Filenames with double quotes can not be uploaded.","try_again":"Try again","loading":"Loading...","remove":"Remove"};
+</script>
+
+
+<link rel="stylesheet" href="/NoAuth/css/rudder/squished-b7ab14baf443dc53faa1ed5d992c9250.css" type="text/css" media="all" />
+
+<link rel="shortcut icon" href="/static/images/favicon.png" type="image/png" />
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/static/css/rudder/msie.css" type="text/css" media="all" />
+<![endif]-->
+
+
+<!-- Site CSS from theme editor -->
+<style type="text/css" media="all" id="sitecss">
+/* Page */
+body {}
+div#body {}
+
+/* Menu bar */
+div#quickbar {}
+#main-navigation #app-nav.sf-shadow > li, #main-navigation #app-nav.sf-shadow > li > a, #prefs-menu > li, #prefs-menu > li > a, #logo .rtname {}
+
+/* Title bar */
+div#header {}
+
+/* Page title */
+div#header h1 {}
+
+/* Page content */
+div#body {}
+
+/* Buttons */
+input[type="reset"], input[type="submit"], input[class="button"] {}
+
+/* Button hover */
+input[type="reset"]:hover, input[type="submit"]:hover, input[class="button"]:hover {}
+
+/* Inicio das alteracoes */
+
+/* barra superior */
+div#header {
+    background: #3A507B;
+}
+
+/* botao de novo ticket */
+#topactions input[type="submit"], #topactions input.button {
+    background-color: #597CA4;
+}
+
+/* caixas de titulos e seus conteudos */
+.titlebox .titlebox-content {
+background-color: #e3e9ef;
+}
+
+/* Corpo da conversa */
+.transaction.odd {
+    background-color: #f8f8f8;
+}
+
+/* botao de interacao da conversa */
+.button:focus, input.button:focus, button:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[class="button"]:focus, .button:hover, input.button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[class="button"]:hover {
+    background: #3D5B9D;
+}
+
+</style>
+
+
+<script type="text/javascript" src="/NoAuth/js/squished-c1c0514563fbcbf10a6fc1f617725c83.js"></script>
+
+<script type="text/javascript"><!--
+jQuery( loadTitleBoxStates );
+    jQuery(function () { jQuery('\x23user').focus() });
+--></script>
+
+
+<script>
+if (window.top !== window.self) {
+    document.write = "";
+
+    window.top.location = window.self.location;
+
+    setTimeout(function(){
+        document.body.innerHTML = "";
+    }, 1);
+
+    window.self.onload = function(){
+        document.body.innerHTML = "";
+    };
+}
+</script>
+
+
+</head>
+  <body class="rudder sidebyside" id="comp-index">
+
+<div id="logo">
+<a href="http://bestpractical.com"><img
+    src="/NoAuth/Helpers/CustomLogo/3c9c4666f2c6d114344d2e145cd722ba"
+    alt="Request Tracker logo" /></a>
+    <span class="rtname">RT for servicos.sti.ufc.br</span>
+</div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    <span id="not-logged-in">Not logged in.</span>
+</div>
+
+</div>
+<div id="header"><h1>Login</h1></div>
+
+
+
+<div id="body" class="login-body">
+
+
+
+
+<div id="login-box">
+<div class="">
+  <div class="titlebox" id="">
+  <div class="titlebox-title">
+    <span class="left">Login</span>
+    <span class="right">                4.4.2    </span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_index_html------TG9naW4_---0">
+
+
+
+
+
+<form id="login" name="login" method="post" action="/NoAuth/Login.html">
+
+<div class="input-row">
+    <span class="label">Username:</span>
+    <span class="input"><input name="user" value="" id="user" /></span>
+</div>
+
+<div class="input-row">
+    <span class="label">Password:</span>
+    <span class="input"><input type="password" name="pass" /></span>
+</div>
+
+<input type="hidden" name="next" value="4f325da3400e4543fbf2393c1e699834" />
+
+<script type="text/javascript">
+jQuery(function(){
+    if (window.location.hash) {
+        var form = jQuery("form[name=login]");
+        form.attr('action', form.attr('action') + '#' + window.location.hash.replace(/^#/, ''));
+    }
+});
+</script>
+
+<div class="button-row">
+    <span class="input"><input type="submit" class="button" value="Login" /></span>
+</div>
+
+
+</form>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+</div><!-- #login-box -->
+</div><!-- #login-body -->
+  <hr class="clear" />
+</div>
+<div id="footer" title="Best Practical Solutions, LLC, copyright and logo">
+  <p id="time"><span>Time to display: 0.638687</span></p>
+  <p id="bpscredits"><span>&#187;&#124;&#171; RT 4.4.2 Copyright 1996-2017 <a href="http://www.bestpractical.com?rt=4.4.2">Best Practical Solutions, LLC</a>.
+</span></p>
+  <p id="legal">Distributed under <a href="http://www.gnu.org/licenses/gpl-2.0.html">version 2 of the GNU GPL</a>.<br />To inquire about support, training, custom development or licensing, please contact <a href="mailto:sales@bestpractical.com">sales@bestpractical.com</a>.<br /></p>
+</div>
+  </body>
+</html>
+
+
+
+
+directory_scan:
+None
+
+ports:
+25/tcp  open  smtp     Postfix smtpd
+80/tcp  open  http     Apache httpd
+443/tcp open  ssl/http Apache httpd
+

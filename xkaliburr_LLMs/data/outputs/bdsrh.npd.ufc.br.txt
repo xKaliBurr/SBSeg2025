@@ -1,0 +1,371 @@
+Site: http://bdsrh.npd.ufc.br/
+Performed at: 17/12/2024 - 10:33:29
+IP: 200.17.41.35
+whatweb:
+WhatWeb report for http://bdsrh.npd.ufc.br/
+Status    : 200 OK
+Title     : RH. Cliente: 10.102.20.255 em 17/12/2024 10:31:38
+IP        : 200.17.41.35
+Country   : BRAZIL, BR
+
+Summary   : ASP_NET, Cookies[ASPSESSIONIDQCCTDCAD], HTTPServer[Microsoft-IIS/5.0], Microsoft-IIS[5.0], PasswordField[Senha], Script[JavaScript,text/javascript], X-Powered-By[ASP.NET]
+
+Detected Plugins:
+[ ASP_NET ]
+	ASP.NET is a free web framework that enables great Web 
+	applications. Used by millions of developers, it runs some 
+	of the biggest sites in the world. 
+
+	Google Dorks: (2)
+	Website     : https://www.asp.net/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : ASPSESSIONIDQCCTDCAD
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/5.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 5.0
+	Website     : http://www.iis.net/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : Senha (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : JavaScript,text/javascript
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: Microsoft-IIS/5.0
+	Date: Tue, 17 Dec 2024 13:31:37 GMT
+	X-Powered-By: ASP.NET
+	Connection: close
+	Content-Length: 7078
+	Content-Type: text/html
+	Set-Cookie: ASPSESSIONIDQCCTDCAD=KLJMJJHDJCGDLGNAJDIAFCLI; path=/
+	Cache-control: private
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.17.41.0 to 200.17.41.255
+[+] 	 PTR dasr06.npd.ufc.br 200.17.41.3
+[+] 	 PTR aplic01.npd.ufc.br 200.17.41.11
+[+] 	 PTR mail.suporte.ufc.br 200.17.41.8
+[+] 	 PTR npdap1.npd.ufc.br 200.17.41.13
+[+] 	 PTR aplic02.npd.ufc.br 200.17.41.12
+[+] 	 PTR srvdb.npd.ufc.br 200.17.41.5
+[+] 	 PTR mail.sofia.ufc.br 200.17.41.22
+[+] 	 PTR bibapl.npd.ufc.br 200.17.41.29
+[+] 	 PTR teses.npd.ufc.br 200.17.41.31
+[+] 	 PTR npd-gw.npd.ufc.br 200.17.41.33
+[+] 	 PTR ufcnx.npd.ufc.br 200.17.41.34
+[+] 	 PTR jeri8.ufc.br 200.17.41.28
+[+] 	 PTR cici.npd.ufc.br 200.17.41.36
+[+] 	 PTR npds01.npd.ufc.br 200.17.41.39
+[+] 	 PTR bibweb.npd.ufc.br 200.17.41.30
+[+] 	 PTR bdsrh.npd.ufc.br 200.17.41.35
+[+] 	 PTR Servidor-BD.npd.ufc.br 200.17.41.44
+[+] 	 PTR npds00.npd.ufc.br 200.17.41.40
+[+] 	 PTR dpudesenv.sti.ufc.br 200.17.41.49
+[+] 	 PTR janis.sti.ufc.br 200.17.41.46
+[+] 	 PTR ufcnt.npd.ufc.br 200.17.41.48
+[+] 	 PTR switch.npd.ufc.br 200.17.41.50
+[+] 	 PTR pegasus.npd.ufc.br 200.17.41.53
+[+] 	 PTR leonardo.npd.ufc.br 200.17.41.65
+[+] 	 PTR devel.npd.ufc.br 200.17.41.55
+[+] 	 PTR dpusitius.sti.ufc.br 200.17.41.56
+[+] 	 PTR teste.npd.ufc.br 200.17.41.64
+[+] 	 PTR emilia.npd.ufc.br 200.17.41.144
+[+] 	 PTR proxy.ufc.br 200.17.41.179
+[+] 	 PTR cafe-ldap.ufc.br 200.17.41.240
+[+] 	 PTR cafe-idp.ufc.br 200.17.41.242
+[+] 	 PTR cafe-eid.ufc.br 200.17.41.241
+[+] 	 PTR cafe-novo.ufc.br 200.17.41.249
+[+] 	 PTR eduroam.ufc.br 200.17.41.243
+[+] 	 PTR cafe-shib-novo.ufc.br 200.17.41.248
+[+] 35 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for bdsrh.npd.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 11 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host bdsrh.npd.ufc.br:80 was resolved.
+* IPv6: (none)
+* IPv4: 200.17.41.35
+*   Trying 200.17.41.35:80...
+* Connected to bdsrh.npd.ufc.br (200.17.41.35) port 80
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: bdsrh.npd.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: Microsoft-IIS/5.0
+< Date: Tue, 17 Dec 2024 13:31:35 GMT
+< X-Powered-By: ASP.NET
+< Content-Length: 7078
+< Content-Type: text/html
+< Set-Cookie: ASPSESSIONIDQCCTDCAD=JLJMJJHDKJLKILJPLDAJGKOH; path=/
+< Cache-control: private
+< 
+{ [2652 bytes data]
+
+100  7078  100  7078    0     0   884k      0 --:--:-- --:--:-- --:--:-- 1152k
+* Connection #0 to host bdsrh.npd.ufc.br left intact
+
+
+<html>
+
+<head>
+<title>RH. Cliente: 10.102.20.255 em 17/12/2024 10:31:35</title>
+<script language="JavaScript1.2" type="text/javascript"> 
+<!--
+  if (!( navigator.appName != 'Netscape' || navigator.appVersion.substring(0,1) < 4 ))
+	 document.captureEvents(Event.KEYDOWN);//1 
+  document.onkeydown = trataTeclas;//2 
+
+function posicao()//Ligar apenas no Natal
+{ coord_X = event.clientX;
+  coord_Y = event.clientY;
+  window.status=coord_X + "  X  " + coord_Y;
+  camada01.style.top=coord_Y-200;
+  camada01.style.right=coord_X-200;
+}
+
+  function trataTeclas(eventet) 
+  { 
+       var tecla; 
+       if (navigator.appName != 'Netscape')
+       {
+	  tecla = window.event.keyCode;
+       }
+       else
+       {
+	  tecla = eventet.which;
+       }
+       switch(tecla)
+       {
+	  case 13:
+	  {
+	       testaCampo(window.document.form);
+	       break;				
+	  }
+	  case 9:
+	  {
+	       window.document.valida.Identificador.focus();
+	       break;			
+	  }
+       }
+    } 
+//--> 
+</script>
+</head>
+
+<body bgcolor="#FFFFCC" onload="esseBrowser();">
+<!--
+<body onload="esseBrowser();" onMouseMove="posicao();" bgcolor="#FFFFCC"onLoad="document.forms[0].Identificador.focus();">
+<div id="camada01" style="{position:absolute;top:0;right:0;width:0;height:0}">
+<img src="../images/FelizNatal.gif" width="310" height="160">
+</div>
+-->
+<form action="valida.asp" method="POST" name="valida">
+<table border="1" width="100%" cellspacing="0" cellpadding="5" >
+  <tr>
+    <td align="center" onclick="window.open('http://www.ufc.br/');" title="www.ufc.br"
+	onmouseover="this.style.cursor='hand';"
+	onmouseout= "this.style.cursor='default';">
+	<img border="0" src="images/selo_marca.gif" width="55" height="65"></td>
+    <td onclick="window.open('http://www.srh.ufc.br/');" title="www.srh.ufc.br"
+	onmouseover="this.style.cursor='hand';"
+	onmouseout= "this.style.cursor='default';">
+      <font face="verdana" color="#8B4513" size=4><b>Universidade Federal do Cear</b><BR>
+      <font face="verdana" color="#8B4513" size=3><b>Pr-Reitoria de Gesto de Pessoas</b><BR>
+      <font face="verdana" color="#8B4513" size=2><b>RHNet - Sistema de Informaes de Recursos Humanos</b></font>
+    </td>
+    <td align="center"><img border="0" src="images/rhnet.gif" width="55" height="65"></td>
+  </tr>
+</table>
+    <table border="0" width="100%" cellpadding="0">
+      <tr>
+	<td align="center"><font face="verdana" color="#8B4513"><b>Acesso ao Sistema</b></font><br>
+	    <div style="{border:1 solid red;font-size:8pt;color:red;width:70%}">
+		  <b>Antes de prosseguir, habilite o pop-up do seu navegador...</b><br>
+ 		  <b>Ative o modo de COMPATIBILIDADE do seu navegador Internet Explorer...</b>
+		  <br>
+		  <b>ATENO:</b>
+	          O seu CPF, sem dgito verificador, ser usado como senha de acesso ao RhNet.
+            </div>
+       </td>
+      </tr>
+      <tr>
+	<td align="center"><img border="0" src="images/ContraCheque3.gif" width="380" height="240">
+	</td>
+      </tr>
+      <tr>
+	<td align="center">
+	 
+	  <table>
+	  <tr><td align="right" style="{font-family:verdana;font-size:7pt;color:#8B4513}">Matrcula Siape:
+	      </td>
+	      <td align="left">
+	          <input type="text" size="10" maxlength="10" name="Identificador" tabindex="0" 
+	                 style="{height:14pt;font-family:verdana;font-size:7pt;color:#8B4513}"
+		         onblur="window.document.valida.Senha.focus();">
+	      </td></tr>
+	  <tr><td align="right" style="{font-family:verdana;font-size:7pt;color:#8B4513}">CPF:
+	      </td>
+	      <td align="left">
+	          <input type="password" size="10" maxlength="10" name="Senha" tabindex="1" title="CPF sem digito"
+	                 style="{height:14pt;font-family:verdana;font-size:7pt;color:#8B4513}">
+	      </td></tr>
+	  </table>
+	</td>
+      </tr>
+      <tr>
+        <td align="center">
+<script language="JavaScript">
+<!--
+{   
+document.writeln(
+    '<button type="button" onclick="testaCampo()"     style="{height:14pt;font-family:verdana;font-size:7pt;color:#8B4513;' +
+            'background-color:#8B4513;color:#FFFFFF;border-style:groove}">Entrar</button>');
+document.writeln(
+    '<button type="button" onclick="document.valida.reset();"     style="{height:14pt;font-family:verdana;font-size:7pt;color:#8B4513;' +
+            'background-color:#8B4513;color:#FFFFFF;border-style:groove}">Limpar</button>');
+}
+-->
+</script>
+	
+	</td>
+     </tr>
+  </table>
+</form>
+
+<table border="0" width="100%">
+<tr>
+<td width="50%" >
+<div style="{text-align:left;font-family:verdana;font-size:7pt;color:#4F4F4F}">
+<i>Clique na sua Classe/Designao, a seguir, para baixar o seu manual de avaliao de desempenho:</i><BR>
+</div>
+<div style="{text-align:left;font-variant:small-caps;font-size:7pt;}">
+<a href="../Arquivos/Manual_AB.pdf">Classes A e B</a> &nbsp;&nbsp;| &nbsp;&nbsp;
+<a href="../Arquivos/Manual_CD.pdf">Classes C e D</a> &nbsp;&nbsp;| &nbsp;&nbsp;
+<a href="../Arquivos/Manual_E.pdf">Classe E</a> &nbsp;&nbsp;| &nbsp;&nbsp;
+<a href="../Arquivos/Manual_ChfFG.pdf">Chefe com FG</a> &nbsp;&nbsp;| &nbsp;&nbsp;
+<a href="../Arquivos/Manual_ChfCD.pdf">Chefe com CD</a>
+</div>
+</td>
+<td width="50%">
+<div style="{text-align:right;font-family:verdana;font-size:7pt;color:#4F4F4F}">
+<a href="http://sistemas.cgu.gov.br/scap/formcalculaaposentadoria.php">
+<i>Clique aqui</i> p/ acionar o Simulador de Aposentadoria do Servidor Pblico</a><br>
+da CGU - Controladoria-Geral da Uni&atilde;o</div>
+</td>
+</tr>
+</table>
+<hr>
+<div style="{text-align:right;font-family:verdana;font-size:7pt;color:#4F4F4F}">
+&copy; 2004 Projeto e desenvolvimento: <a href="http://www.ufrn.br">UFRN/PRH</a>.<BR> 
+Todos os direitos reservados.</div>
+
+<script language="JavaScript">
+<!--
+ function testaCampo()
+ {
+   if ( navigator.appName.substr(0,9) != "Microsoft")
+   {    alert('Voc est usando ' + navigator.appName + navigator.userAgent+ 
+              '\nMelhor utilizar o Microsoft Internet Explorer...'); 
+        return;
+   }   
+
+   if (window.document.valida.Identificador.value == "")
+   {
+      alert(" necessario informar o identificador do usurio!!");
+      window.document.valida.Identificador.focus();
+      return;
+   }
+   if (window.document.valida.Senha.value == "")
+   {
+      alert(" necessario informar a Senha!!");
+      window.document.valida.Senha.focus();
+      return;
+   }
+   window.document.valida.submit();
+ }
+ function esseBrowser()
+ { if ( navigator.appName.substr(0,9) != "Microsoft")
+   {    alert('O(A) Sr(a). est usando um navegador da familia:\n\t' + navigator.appName + '\n\t' + navigator.userAgent + 
+	      '\n\nMelhor utilizar o Microsoft Internet Explorer (IE) 5.5 ou 6 ... 10 ' +
+	      '\npara lanar Avaliao de Desempenho de Servidor(a).' +
+	      '\n\nSe voc j est no IE, ento habilite o seu modo de COMPATIBILIDADE, permita POP-UPs e tente novamente.' +
+	      '\n\nAgradecemos a sua compreenso.');
+   }
+   return;
+ }
+// -->
+</script>
+</body>
+</html>
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://bdsrh.npd.ufc.br
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   301,302,303,403,404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/printers             (Status: 401) [Size: 4785]
+/Printers             (Status: 401) [Size: 4785]
+===============================================================
+Finished
+===============================================================
+
+ports:
+80/tcp   open   http       Microsoft IIS httpd 5.0
+

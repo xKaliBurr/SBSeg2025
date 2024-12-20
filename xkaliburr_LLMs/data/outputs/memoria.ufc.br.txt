@@ -1,0 +1,546 @@
+Site: https://memoria.ufc.br/
+Performed at: 09/12/2024 - 12:33:30
+IP: 200.129.40.150
+whatweb:
+WhatWeb report for https://memoria.ufc.br/
+Status    : 200 OK
+Title     : Welcome - Prograd UFC
+IP        : 200.129.40.150
+Country   : BRAZIL, BR
+
+Summary   : Cookies[atom_authenticated,atom_culture,symfony], HTML5, HTTPServer[nginx], HttpOnly[atom_culture,symfony], nginx, PasswordField[password], Script, Symfony, UncommonHeaders[content-security-policy-report-only], X-UA-Compatible[IE=edge,chrome=1]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : symfony
+	String       : atom_culture
+	String       : atom_authenticated
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : nginx (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : atom_culture,symfony
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ Symfony ]
+	Symfony - open-source PHP web framework 
+
+	Website     : https://symfony.com/
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : content-security-policy-report-only (from headers)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge,chrome=1
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx
+	Date: Mon, 09 Dec 2024 15:32:33 GMT
+	Content-Type: text/html; charset=utf-8
+	Transfer-Encoding: chunked
+	Connection: close
+	Vary: Accept-Encoding
+	Set-Cookie: symfony=qj11bl3c072lh49njm0p9cdbpd; path=/; secure; HttpOnly
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Set-Cookie: atom_culture=en; path=/; secure; HttpOnly; SameSite=strict
+	Set-Cookie: atom_authenticated=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; secure; SameSite=strict
+	X-Ua-Compatible: IE=edge,chrome=1
+	Content-Security-Policy-Report-Only: default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com  *.googleusercontent.com data: https://www.gravatar.com/avatar/ https://*.google-analytics.com https://*.googletagmanager.com blob:; script-src 'self' https://*.googletagmanager.com 'nonce-f27657751de429589be70048869e32e5' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:; style-src 'self' 'nonce-f27657751de429589be70048869e32e5' https://fonts.googleapis.com; worker-src 'self' blob:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:; frame-ancestors 'self';
+	Content-Encoding: gzip
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.129.40.0 to 200.129.40.255
+[+] 0 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for memoria.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 13 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host memoria.ufc.br:443 was resolved.
+* IPv6: (none)
+* IPv4: 200.129.40.150
+*   Trying 200.129.40.150:443...
+* GnuTLS ciphers: NORMAL:-ARCFOUR-128:-CTYPE-ALL:+CTYPE-X509:-VERS-SSL3.0
+* SSL connection using TLS1.3 / ECDHE_RSA_AES_256_GCM_SHA384
+*   server certificate verification SKIPPED
+*   server certificate status verification SKIPPED
+*   common name: memoria.ufc.br (matched)
+*   server certificate expiration date OK
+*   server certificate activation date OK
+*   certificate public key: RSA
+*   certificate version: #3
+*   subject: C=BR,ST=CEARA,L=Fortaleza,O=UNIVERSIDADE FEDERAL DO CEARA,CN=memoria.ufc.br
+*   start date: Mon, 02 Dec 2024 19:11:02 GMT
+*   expire date: Sat, 03 Jan 2026 19:11:01 GMT
+*   issuer: C=BR,O=Rede Nacional de Ensino e Pesquisa - RNP,CN=RNP ICPEdu OV SSL CA 2019
+* ALPN: server accepted http/1.1
+* Connected to memoria.ufc.br (200.129.40.150) port 443
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: memoria.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx
+< Date: Mon, 09 Dec 2024 15:32:30 GMT
+< Content-Type: text/html; charset=utf-8
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Vary: Accept-Encoding
+< Set-Cookie: symfony=49j9amvckoc81ocr9j0jeub5q5; path=/; secure; HttpOnly
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate
+< Pragma: no-cache
+< Set-Cookie: atom_culture=en; path=/; secure; HttpOnly; SameSite=strict
+< Set-Cookie: atom_authenticated=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; secure; SameSite=strict
+< X-Ua-Compatible: IE=edge,chrome=1
+< Content-Security-Policy-Report-Only: default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com  *.googleusercontent.com data: https://www.gravatar.com/avatar/ https://*.google-analytics.com https://*.googletagmanager.com blob:; script-src 'self' https://*.googletagmanager.com 'nonce-bde89943634cd49f972ae1315c9dc88a' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:; style-src 'self' 'nonce-bde89943634cd49f972ae1315c9dc88a' https://fonts.googleapis.com; worker-src 'self' blob:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.googleapis.com *.google.com https://*.gstatic.com  data: blob:; frame-ancestors 'self';
+< 
+{ [14951 bytes data]
+
+100 16255    0 16255    0     0   184k      0 --:--:-- --:--:-- --:--:--  186k
+* Connection #0 to host memoria.ufc.br left intact
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome - Prograd UFC</title>
+        <link rel="shortcut icon" href="/favicon.ico">
+    <script defer src="/dist/js/vendor.bundle.1697f26639ee588df9ee.js"></script><script defer src="/dist/js/arDominionB5Plugin.bundle.0f4e03041937e8075d96.js"></script><link href="/dist/css/arDominionB5Plugin.bundle.33b8488ae3d60e127786.css" rel="stylesheet">
+      </head>
+  <body class="d-flex flex-column min-vh-100 staticpage home">
+        <div class="visually-hidden-focusable p-3 border-bottom">
+  <a class="btn btn-sm btn-secondary" href="#main-column">
+    Skip to main content  </a>
+</div>
+    
+
+
+
+<header id="top-bar" class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+  <div class="container-fluid">
+          <a class="navbar-brand d-flex flex-wrap flex-lg-nowrap align-items-center py-0 me-0" href="/index.php/" title="Home" rel="home">
+                  <img alt="AtoM logo" class="d-inline-block my-2 me-3" height="35" src="/plugins/arDominionB5Plugin/images/logo.png" />                      </a>
+        <button class="navbar-toggler atom-btn-secondary my-2 me-1 px-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false">
+      <i 
+        class="fas fa-2x fa-fw fa-bars" 
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Toggle navigation"
+        aria-hidden="true">
+      </i>
+      <span class="visually-hidden">Toggle navigation</span>
+    </button>
+    <div class="collapse navbar-collapse flex-wrap justify-content-end me-1" id="navbar-content">
+      <div class="d-flex flex-wrap flex-lg-nowrap flex-grow-1">
+        <div class="dropdown my-2 me-3">
+  <button class="btn btn-sm atom-btn-secondary dropdown-toggle" type="button" id="browse-menu" data-bs-toggle="dropdown" aria-expanded="false">
+    Browse  </button>
+  <ul class="dropdown-menu mt-2" aria-labelledby="browse-menu">
+    <li>
+      <h6 class="dropdown-header">
+        Browse      </h6>
+    </li>
+                  <li id="node_browseInformationObjects">
+          <a class="dropdown-item" href="/index.php/informationobject/browse" title="Archival descriptions">Archival descriptions</a>        </li>
+                        <li id="node_browseActors">
+          <a class="dropdown-item" href="/index.php/actor/browse" title="Authority records">Authority records</a>        </li>
+                        <li id="node_browseRepositories">
+          <a class="dropdown-item" href="/index.php/repository/browse" title="Archival institutions">Archival institutions</a>        </li>
+                        <li id="node_browseFunctions">
+          <a class="dropdown-item" href="/index.php/function/browse" title="Functions">Functions</a>        </li>
+                        <li id="node_browseSubjects">
+          <a class="dropdown-item" href="/index.php/taxonomy/index/id/35" title="Subjects">Subjects</a>        </li>
+                        <li id="node_browsePlaces">
+          <a class="dropdown-item" href="/index.php/taxonomy/index/id/42" title="Places">Places</a>        </li>
+                        <li id="node_browseDigitalObjects">
+          <a class="dropdown-item" href="/index.php/informationobject/browse?view=card&amp;onlyMedia=1&amp;topLod=0" title="Digital objects">Digital objects</a>        </li>
+            </ul>
+</div>
+        <form
+  id="search-box"
+  class="d-flex flex-grow-1 my-2"
+  role="search"
+  action="/index.php/informationobject/browse">
+  <h2 class="visually-hidden">Search</h2>
+  <input type="hidden" name="topLod" value="0">
+  <input type="hidden" name="sort" value="relevance">
+  <div class="input-group flex-nowrap">
+    <button
+      id="search-box-options"
+      class="btn btn-sm atom-btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      data-bs-auto-close="outside"
+      aria-expanded="false">
+      <i class="fas fa-cog" aria-hidden="true"></i>
+      <span class="visually-hidden">Search options</span>
+    </button>
+    <div class="dropdown-menu mt-2" aria-labelledby="search-box-options">
+              <div class="px-3 py-2">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="repos"
+              id="search-realm-global"
+              checked
+              value>
+            <label class="form-check-label" for="search-realm-global">
+              Global search            </label>
+          </div>
+                            </div>
+        <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/index.php/informationobject/browse?showAdvanced=1&topLod=0">
+        Advanced search      </a>
+    </div>
+    <input
+      id="search-box-input"
+      class="form-control form-control-sm dropdown-toggle"
+      type="search"
+      name="query"
+      autocomplete="off"
+      value=""
+      placeholder="Search"
+      data-url="/index.php/search/autocomplete"
+      data-bs-toggle="dropdown"
+      aria-label="Search"
+      aria-expanded="false">
+    <ul id="search-box-results" class="dropdown-menu mt-2" aria-labelledby="search-box-input"></ul>
+    <button class="btn btn-sm atom-btn-secondary" type="submit">
+      <i class="fas fa-search" aria-hidden="true"></i>
+      <span class="visually-hidden">Search in browse page</span>
+    </button>
+  </div>
+</form>
+      </div>
+      <div class="d-flex flex-nowrap flex-column flex-lg-row align-items-strech align-items-lg-center">
+        <ul class="navbar-nav mx-lg-2">
+                    <li class="nav-item dropdown d-flex flex-column">
+  <a
+    class="nav-link dropdown-toggle d-flex align-items-center p-0"
+    href="#"
+    id="clipboard-menu"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    data-total-count-label="records added"
+    data-alert-close="Close"
+    data-load-alert-message="There was an error loading the clipboard content."
+    data-export-alert-message="The clipboard is empty for this entity type."
+    data-export-check-url="/index.php/clipboard/exportCheck"
+    data-delete-alert-message="Note: clipboard items unclipped in this page will be removed from the clipboard when the page is refreshed. You can re-select them now, or reload the page to remove them completely. Using the sort or print preview buttons will also cause a page reload - so anything currently deselected will be lost!">
+    <i
+      class="fas fa-2x fa-fw fa-paperclip px-0 px-lg-2 py-2"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-custom-class="d-none d-lg-block"
+      title="Clipboard"
+      aria-hidden="true">
+    </i>
+    <span class="d-lg-none mx-1" aria-hidden="true">
+      Clipboard    </span>
+    <span class="visually-hidden">
+      Clipboard    </span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="clipboard-menu">
+    <li>
+      <h6 class="dropdown-header">
+        Clipboard      </h6>
+    </li>
+    <li class="text-muted text-nowrap px-3 pb-2">
+      <span
+        id="counts-block"
+        data-information-object-label="Archival description"
+        data-actor-object-label="Authority record"
+        data-repository-object-label="Archival institution">
+      </span>
+    </li>
+                  <li id="node_clearClipboard">
+          <a class="dropdown-item" href="/index.php/" title="Clear all selections">Clear all selections</a>        </li>
+                        <li id="node_goToClipboard">
+          <a class="dropdown-item" href="/index.php/clipboard/view" title="Go to clipboard">Go to clipboard</a>        </li>
+                        <li id="node_loadClipboard">
+          <a class="dropdown-item" href="/index.php/clipboard/load" title="Load clipboard">Load clipboard</a>        </li>
+                        <li id="node_saveClipboard">
+          <a class="dropdown-item" href="/index.php/clipboard/save" title="Save clipboard">Save clipboard</a>        </li>
+            </ul>
+</li>
+                      <li class="nav-item dropdown d-flex flex-column">
+  <a
+    class="nav-link dropdown-toggle d-flex align-items-center p-0"
+    href="#"
+    id="language-menu"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false">
+    <i
+      class="fas fa-2x fa-fw fa-globe-europe px-0 px-lg-2 py-2"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-custom-class="d-none d-lg-block"
+      title="Language"
+      aria-hidden="true">
+    </i>
+    <span class="d-lg-none mx-1" aria-hidden="true">
+      Language    </span>
+    <span class="visually-hidden">
+      Language    </span>  
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="language-menu">
+    <li>
+      <h6 class="dropdown-header">
+        Language      </h6>
+    </li>
+          <li>
+        <a class="dropdown-item" href="/index.php/?sf_culture=en" title="English">English</a>      </li>
+          <li>
+        <a class="dropdown-item" href="/index.php/?sf_culture=fr" title="Français">Français</a>      </li>
+          <li>
+        <a class="dropdown-item" href="/index.php/?sf_culture=es" title="Español">Español</a>      </li>
+          <li>
+        <a class="dropdown-item" href="/index.php/?sf_culture=nl" title="Nederlands">Nederlands</a>      </li>
+          <li>
+        <a class="dropdown-item" href="/index.php/?sf_culture=pt" title="Português">Português</a>      </li>
+      </ul>
+</li>
+                    <li class="nav-item dropdown d-flex flex-column">
+  <a
+    class="nav-link dropdown-toggle d-flex align-items-center p-0"
+    href="#"
+    id="quick-links-menu"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false">
+    <i
+      class="fas fa-2x fa-fw fa-info-circle px-0 px-lg-2 py-2"
+      data-bs-toggle="tooltip"
+      data-bs-placement="bottom"
+      data-bs-custom-class="d-none d-lg-block"
+      title="Quick links"
+      aria-hidden="true">
+    </i>
+    <span class="d-lg-none mx-1" aria-hidden="true">
+      Quick links    </span> 
+    <span class="visually-hidden">
+      Quick links    </span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end mb-2" aria-labelledby="quick-links-menu">
+    <li>
+      <h6 class="dropdown-header">
+        Quick links      </h6>
+    </li>
+                  <li id="node_home">
+          <a class="dropdown-item" href="/index.php/" title="Home">Home</a>        </li>
+                        <li id="node_about">
+          <a class="dropdown-item" href="/index.php/about" title="About">About</a>        </li>
+                        <li id="node_privacy">
+          <a class="dropdown-item" href="/index.php/privacy" title="Privacy Policy">Privacy Policy</a>        </li>
+                        <li id="node_help">
+          <a class="dropdown-item" href="http://docs.accesstomemory.org/" title="Help">Help</a>        </li>
+                                          </ul>
+</li>
+        </ul>
+              <div class="dropdown my-2">
+    <button class="btn btn-sm atom-btn-secondary dropdown-toggle" type="button" id="user-menu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+      Log in    </button>
+    <div class="dropdown-menu dropdown-menu-lg-end mt-2" aria-labelledby="user-menu">
+      <div>
+        <h6 class="dropdown-header">
+          Have an account?        </h6>
+      </div>
+      <form class="mx-3 my-2" action="/index.php/user/login" method="post">        <input type="hidden" name="_csrf_token" value="ad9728f05a9a5cfb5e848432a99116a8" id="csrf_token" /><input type="hidden" name="next" value="https://memoria.ufc.br/" id="next" />        <div class="mb-3"><label class="form-label" for="email">Email<span aria-hidden="true" class="text-primary ms-1"><strong>*</strong></span><span class="visually-hidden">This field is required.</span></label><input type="text" name="email" class="form-control-sm form-control" id="email" /></div>        <div class="mb-3"><label class="form-label" for="password">Password<span aria-hidden="true" class="text-primary ms-1"><strong>*</strong></span><span class="visually-hidden">This field is required.</span></label><input type="password" name="password" class="form-control-sm form-control" autocomplete="off" id="password" /></div>        <button class="btn btn-sm atom-btn-secondary" type="submit">
+          Log in        </button>
+      </form>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="bg-secondary text-white">
+    <div class="container-xl py-1">
+      Prograd    </div>
+  </div>
+    
+<div id="wrapper" class="container-xxl pt-3 flex-grow-1">
+            <div class="row">
+    <div id="sidebar" class="col-md-3">
+      
+  
+        <section class="card mb-3">
+      <h2 class="h5 p-3 mb-0">
+        Browse by      </h2>
+      <div class="list-group list-group-flush">
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/informationobject/browse">
+            Archival descriptions          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/actor/browse">
+            Authority records          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/repository/browse">
+            Archival institutions          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/function/browse">
+            Functions          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/taxonomy/index/id/35">
+            Subjects          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/taxonomy/index/id/42">
+            Places          </a>
+                  <a
+            class="list-group-item list-group-item-action"
+            href="/index.php/informationobject/browse?view=card&onlyMedia=1&topLod=0">
+            Digital objects          </a>
+              </div>
+    </section>
+  
+  <section id="popular-this-week" class="card mb-3">
+  <h2 class="h5 p-3 mb-0">
+    Popular this week  </h2>
+  <div class="list-group list-group-flush">
+                <a
+        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center text-break"
+        href="/index.php/ufc-2">
+        UFC        <span class="ms-3 text-nowrap">
+          5 visits        </span>
+      </a>
+                <a
+        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center text-break"
+        href="/index.php/ufc-3">
+        UFC        <span class="ms-3 text-nowrap">
+          2 visits        </span>
+      </a>
+      </div>
+</section>
+
+    </div>
+    <div id="main-column" role="main" class="col-md-9">
+        <h1>Welcome</h1>
+                    <div id="content">
+          
+
+
+<div class="page p-3">
+  <p>This is the default homepage for AtoM.</p>
+<p>AtoM is a fully web based archival description application that is based on <a href="http://www.ica.org/">International Council on Archives</a> (ICA) standards. <i>AtoM</i> is an acronymn for <i>Access to Memory</i>.</p>
+<p>The ICA and its <a href="http://ica-atom.org/about#partners">project collaborators</a> are making this application available as open source software to provide archival institutions with a free and easy to use option for putting their archival collections online. See the <a href="about">about page</a> to learn more about the AtoM project.</p>
+<p>See the online <a href="http://ica-atom.org/docs">documentation</a> to learn more about using the software or press the <i>browse</i> button on the right to view some sample data.</p></div>
+
+        </div>
+                </div>
+  </div>
+</div>
+
+        <footer>
+
+  
+  
+  <div id="print-date">
+    Printed: 2024-12-09  </div>
+
+  <div id="js-i18n">
+    <div id="read-more-less-links"
+      data-read-more-text="Read more" 
+      data-read-less-text="Read less">
+    </div>
+  </div>
+
+</footer>
+
+  </body>
+</html>
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://memoria.ufc.br
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   301,302,303,403,404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+Error: error on running gobuster: unable to connect to https://memoria.ufc.br/: Get "https://memoria.ufc.br/": tls: failed to verify certificate: x509: certificate signed by unknown authority
+
+ports:
+80/tcp  open   http     nginx
+443/tcp open   ssl/http nginx
+

@@ -1,0 +1,72 @@
+Site: http://cafe-eid.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Uso de Servidor Web com Versão Obsoleta
+
+- Descrição: O servidor Apache utiliza a versão 2.4.10, lançada em 2014. Esta versão está desatualizada e contém diversas vulnerabilidades conhecidas, como falhas em módulos e problemas de segurança na manipulação de requisições HTTP.
+
+- Impacto: Um invasor pode explorar vulnerabilidades conhecidas nesta versão para executar ataques como elevação de privilégios, execução remota de código (RCE) ou negação de serviço (DoS).
+
+- Mitigação:
+ - Atualizar o Apache para a versão mais recente compatível com o ambiente.
+ - Aplicar patches de segurança regularmente.
+ - Monitorar o sistema para atividades suspeitas.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 7.5 (Alta) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H.
+
+
+#2 Falta de Configuração Segura no Servidor Web 
+
+- Descrição: A página inicial do site exibe o conteúdo padrão do Apache, indicando que o servidor não foi configurado adequadamente para uso em produção. Informações como diretórios padrão e práticas de configuração podem ser exploradas por atacantes.
+
+- Impacto: Isso aumenta a superfície de ataque, permitindo que invasores obtenham informações sensíveis sobre o ambiente de hospedagem ou utilizem ferramentas automatizadas para explorar configurações padrão.
+
+- Mitigação:
+ - Substituir a página padrão por uma customizada para o site.
+ - Revisar as permissões de acesso e garantir que apenas conteúdos necessários estejam acessíveis.
+ - Remover arquivos e diretórios não utilizados ou desnecessários no ambiente de produção.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 6.5 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L.
+
+#3 Ausência de Proteção Contra Enumeração de Diretórios
+
+- Descrição: Apesar de não haver diretórios públicos encontrados no relatório de escaneamento, o servidor não apresenta medidas explícitas para impedir a enumeração de diretórios caso arquivos ou diretórios expostos sejam inadvertidamente adicionados.
+
+- Impacto: Um invasor pode listar arquivos e diretórios expostos, obtendo acesso a informações confidenciais, como credenciais, backups ou dados sensíveis.
+
+- Mitigação:
+ - Configurar o Apache para desabilitar a listagem de diretórios: Adicionar Options->Indexes no arquivo de configuração do Apache.
+ - Garantir que os diretórios acessíveis publicamente contenham apenas os arquivos necessários.
+ - Realizar auditorias frequentes no servidor.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 5.3 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N.
+
+
+#4 Informação Excessiva em Cabeçalhos HTTP
+
+- Descrição: O cabeçalho HTTP revela detalhes do servidor, como a versão do Apache (Apache/2.4.10) e do sistema operacional (Debian). Essas informações podem ajudar invasores a identificar possíveis vulnerabilidades para explorar.
+
+- Impacto: A divulgação de informações detalhadas facilita o reconhecimento por atacantes e pode acelerar a exploração de vulnerabilidades conhecidas.
+
+- Mitigação:
+ - Configurar o Apache para ocultar informações do cabeçalho HTTP: Utilizar o módulo mod_headers para remover ou modificar os cabeçalhos. Adicionar ServerTokens Prod e ServerSignature Off na configuração do Apache.
+ - Aplicar práticas de segurança como redução de ruído em logs.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 5.0 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N.
+
+
+
+Ações Prioritárias:
+#1 Atualização do servidor Apache (Criticidade: Alta).
+#2 Configuração segura no servidor (Criticidade: Média-Alta).
+#3 Remoção de informações nos cabeçalhos HTTP (Criticidade: Média).
+#4 Prevenção de enumeração de diretórios (Criticidade: Média).

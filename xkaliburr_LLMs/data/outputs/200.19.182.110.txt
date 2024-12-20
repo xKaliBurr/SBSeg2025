@@ -1,0 +1,257 @@
+Site: http://200.19.182.110/
+Performed at: 09/12/2024 - 12:29:53
+IP: 200.19.182.110
+whatweb:
+WhatWeb report for http://200.19.182.110/
+Status    : 200 OK
+Title     : SID - Acadêmico
+IP        : 200.19.182.110
+Country   : BRAZIL, BR
+
+Summary   : Bootstrap[3.3.7], Cookies[csrftoken], Django, HTML5, HTTPServer[Ubuntu Linux][nginx/1.10.3 (Ubuntu)], JQuery, nginx[1.10.3], PasswordField[password], Script, X-Frame-Options[SAMEORIGIN], X-UA-Compatible[IE=edge]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Version      : 3.3.7
+	Version      : 3.3.7
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : csrftoken
+
+[ Django ]
+	Django is a high-level Python Web framework that encourages 
+	rapid development and clean, pragmatic design. 
+
+	Website     : https://www.djangoproject.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : nginx/1.10.3 (Ubuntu) (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance 
+	HTTP server and reverse proxy, as well as an IMAP/POP3 
+	proxy server. 
+
+	Version      : 1.10.3
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: nginx/1.10.3 (Ubuntu)
+	Date: Mon, 09 Dec 2024 15:26:39 GMT
+	Content-Type: text/html; charset=utf-8
+	Transfer-Encoding: chunked
+	Connection: close
+	X-Frame-Options: SAMEORIGIN
+	Vary: Cookie
+	Set-Cookie: csrftoken=A6WoAvHIqL5ea56aYvRfdHGyP4dgBLOsqH4uBvEmNlg5Sut1dUZuOf5O2h6J0M5y; expires=Mon, 08-Dec-2025 15:26:39 GMT; Max-Age=31449600; Path=/
+	Content-Encoding: gzip
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.19.182.0 to 200.19.182.255
+[+] 	 PTR ariano.posmec.ufc.br 200.19.182.74
+[+] 	 PTR s98.prograd.ufc.br 200.19.182.98
+[+] 	 PTR s100.prograd.ufc.br 200.19.182.100
+[+] 	 PTR s103.prograd.ufc.br 200.19.182.103
+[+] 	 PTR s105.prograd.ufc.br 200.19.182.105
+[+] 	 PTR s99.prograd.ufc.br 200.19.182.99
+[+] 	 PTR s110.prograd.ufc.br 200.19.182.110
+[+] 	 PTR s104.prograd.ufc.br 200.19.182.104
+[+] 	 PTR s102.prograd.ufc.br 200.19.182.102
+[+] 	 PTR s101.prograd.ufc.br 200.19.182.101
+[+] 	 PTR s107.prograd.ufc.br 200.19.182.107
+[+] 	 PTR s106.prograd.ufc.br 200.19.182.106
+[+] 	 PTR s109.prograd.ufc.br 200.19.182.109
+[+] 	 PTR s108.prograd.ufc.br 200.19.182.108
+[+] 14 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for 200.19.182.110 using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 41 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 200.19.182.110:80...
+* Connected to 200.19.182.110 (200.19.182.110) port 80
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 200.19.182.110
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.10.3 (Ubuntu)
+< Date: Mon, 09 Dec 2024 15:26:38 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 2752
+< Connection: keep-alive
+< X-Frame-Options: SAMEORIGIN
+< Vary: Cookie
+< Set-Cookie: csrftoken=e044Aflrd5QK00Y8NNun6HimZXxdNVpeavhGfML3Y3ynoXugfV3Dd6qjmpgeTsCU; expires=Mon, 08-Dec-2025 15:26:38 GMT; Max-Age=31449600; Path=/
+< 
+{ [1079 bytes data]
+
+100  2752  100  2752    0     0   500k      0 --:--:-- --:--:-- --:--:--  537k
+* Connection #0 to host 200.19.182.110 left intact
+
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>SID - Acadêmico</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+   <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      
+<blockquote class="blockquote text-center">
+    <h1 class="display-4"><b>SID</b></h1>
+    Acadêmico
+</blockquote>
+    <form action="" method="post" class="form-signin">
+    <input type='hidden' name='csrfmiddlewaretoken' value='7tZkvk2qhYwQLuspbG0tAPbc40GRZvHJ3YcWaRs22Wet9rYxDOzJHej9rspS52Up' />
+        <p><input type="text" name="username" class="form-control" placeholder="Login" autocomplete="off"></p>
+        <p><input type="password" name="password" class="form-control" placeholder="Senha"></p>
+        <div class="form-group">
+        <center>
+            <button type="submit" class="btn btn-primary">
+                Enviar
+            </button>
+        </center>
+        </div>
+    </form>
+    
+    <center>
+        <a href="/usuarios/cadastro">
+            Desejo me cadastrar
+        </a>
+    </center>
+
+<script>
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (isChrome == true){
+        $("form :input").attr("disabled", true);
+        $("a").prop("href", "javascript: void(0)");
+        alert("Aplicação desabilitada para o Chrome. Utilize o Mozilla Firefox");
+    }
+</script>
+
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://200.19.182.110
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   403,404,301,302,303
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+===============================================================
+Finished
+===============================================================
+
+ports:
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http    nginx 1.10.3 (Ubuntu)
+3306/tcp open  mysql   MySQL 5.7.33-0ubuntu0.16.04.1
+

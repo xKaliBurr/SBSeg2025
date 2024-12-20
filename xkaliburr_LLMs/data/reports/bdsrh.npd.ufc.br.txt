@@ -1,0 +1,95 @@
+Site: http://bdsrh.npd.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Servidor Desatualizado (Microsoft IIS 5.0)
+
+- Descrição: O servidor web está usando Microsoft IIS 5.0, uma versão descontinuada e sem suporte pela Microsoft. Essa versão é conhecida por diversas vulnerabilidades críticas.
+
+- Impacto: A ausência de atualizações permite exploração de vulnerabilidades conhecidas, como execução remota de código, negação de serviço e escalonamento de privilégios.
+
+- Mitigação:
+ - Atualizar para uma versão suportada do Microsoft IIS (recomenda-se a mais recente compatível com o sistema operacional) ou considerar a migração para um servidor web mais moderno e seguro, como Nginx ou Apache.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.8 (Crítica) CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#2 Exposição de Cabeçalhos Sensíveis (X-Powered-By e Server)
+
+- Descrição: O cabeçalho X-Powered-By expõe que o sistema está rodando ASP.NET, e o cabeçalho Server revela o uso de Microsoft IIS 5.0, facilitando ataques direcionados.
+
+- Impacto: Permite que atacantes ajustem suas técnicas de exploração com base na tecnologia utilizada, aumentando as chances de sucesso.
+
+- Mitigação:
+ -  Configurar o servidor para ocultar cabeçalhos como X-Powered-By e Server. Em IIS, isso pode ser feito editando o registro ou utilizando módulos de segurança como o URL Rewrite.
+
+OWASP Top 10: A01:2021-Broken Access Control
+
+Severidade: 4.3 (Médio) CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+
+
+#3 Uso de Senha Fraca (CPF como senha padrão) 
+
+- Descrição: A senha padrão de acesso ao sistema é configurada como o CPF do usuário, uma prática insegura e previsível.
+
+- Impacto: Facilita ataques de força bruta ou adivinhação, comprometendo contas de usuários e permitindo acesso não autorizado.
+
+- Mitigação:
+ - Implementar autenticação robusta, exigindo senhas fortes e únicas. Habilitar autenticação multifator (MFA) para aumentar a segurança.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures 
+
+Severidade: 8.1 (Alta) CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+
+
+#4 Exposição de Diretórios Sensíveis
+
+- Descrição: O scan de diretórios revelou endpoints protegidos por autenticação básica (/printers e /Printers), mas que podem estar vulneráveis a brute force ou uso de credenciais fracas/padrão.
+
+- Impacto: A exploração pode permitir acesso a informações sensíveis ou arquivos administrativos, comprometendo a confidencialidade e a integridade do sistema.
+
+- Mitigação:
+ - Fortalecer as credenciais de acesso e implementar controles adicionais, como autenticação baseada em IP, MFA e limitação de tentativas de login.
+
+OWASP Top 10: A04:2021-Insecure Design 
+
+Severidade: 7.5 (Alta) CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+
+
+#5 Campos de Entrada Potencialmente Inseguros (Formulário de Login)
+
+- Descrição: O formulário de login não aparenta possuir validação de entrada no lado do servidor e pode estar vulnerável a ataques como SQL Injection ou brute force.
+
+- Impacto: A exploração pode levar ao comprometimento do banco de dados e ao acesso não autorizado ao sistema.
+
+- Mitigação:
+ - Implementar validação de entrada rigorosa e usar práticas seguras como consultas parametrizadas. Configurar limites de tentativas de login e ativar MFA.
+
+OWASP Top 10: A03:2021-Injection
+
+Severidade: 9.8 (Crítica) CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#6 Dependência de Navegador Específico (Internet Explorer)
+
+- Descrição: O site é dependente do Internet Explorer em modo de compatibilidade, uma prática obsoleta e insegura.
+
+- Impacto: A utilização de um navegador desatualizado como o Internet Explorer expõe os usuários a vulnerabilidades do navegador e reduz a segurança do sistema.
+
+- Mitigação:
+ - Atualizar o sistema para ser compatível com navegadores modernos e seguir padrões web atuais.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 4.2 (Médio) CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
+
+
+Ações Prioritárias:
+#1 Atualizar o servidor IIS (9.8 Crítica).
+#2 Corrigir vulnerabilidades de injeção no formulário de login (9.8 Crítica).
+#3 Alterar práticas de autenticação (8.1 Alta).
+#4 Fortalecer a proteção de diretórios sensíveis (7.5 Alta).
+#5 Ocultar cabeçalhos sensíveis (4.3 Médio).
+#6 Modernizar suporte a navegadores (4.2 Médio).

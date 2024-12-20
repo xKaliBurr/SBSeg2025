@@ -1,0 +1,87 @@
+Site: http://dante.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Servidor Apache Desatualizado
+
+- Descrição: O servidor Apache HTTP utiliza a versão 2.2.16, que é obsoleta e não recebe mais atualizações de segurança. Essa versão possui diversas vulnerabilidades conhecidas, como DoS e execução remota de código.
+
+- Impacto: Um atacante pode explorar falhas conhecidas para comprometer o servidor, obter acesso não autorizado ou interromper o serviço. A Consequências disso seria o comprometimento total do servidor, com risco de roubo de informações e uso indevido.
+
+- Mitigação:
+ - Atualizar o Apache para uma versão suportada e estável (idealmente a 2.4 ou superior).
+ - Implementar um processo de atualização contínua.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.8 (Crítico) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#2 Ausência de Conteúdo no Servidor
+
+- Descrição: A mensagem padrão "It works!" indica que o servidor Apache está configurado, mas sem conteúdo. Isso revela informações desnecessárias ao público e pode facilitar a exploração por atacantes.
+
+- Impacto: Um atacante pode usar essa informação para identificar a versão do servidor e aplicar ataques direcionados. Isso levaria ao aumento da superfície de ataque devido à exposição desnecessária.
+
+- Mitigação:
+ - Configurar uma página de erro personalizada e restringir informações sensíveis no cabeçalho HTTP.
+ - Remover ou substituir a página padrão de boas-vinda
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 5.3 (Médio) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#3 Serviço SMTP Aberto
+
+- Descrição:  A porta 25 (SMTP) está aberta e executa o serviço Postfix smtpd, que pode ser explorado para envio de spam ou ataques de phishing.
+
+- Impacto: Um atacante pode abusar do serviço para enviar mensagens maliciosas, prejudicando a reputação do domínio.
+
+- Mitigação:
+ - Configurar autenticação obrigatória para envio de e-mails.
+ - Implementar filtros antispam e monitoramento ativo.
+
+OWASP Top 10: A04:2021-Insecure Design
+
+Severidade:  7.5 (Alta)  CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N
+
+
+#4 Falta de Cabeçalhos de Segurança 
+
+- Descrição: Nenhum cabeçalho de segurança (como Content-Security-Policy, X-Frame-Options ou X-Content-Type-Options) foi detectado na resposta HTTP.
+
+- Impacto: O servidor está vulnerável a ataques como cross-site scripting (XSS), clickjacking e manipulação de MIME. Com isto, seria possível a exploração do navegador do usuário e roubo de informações.
+
+- Mitigação:
+ - Adicionar cabeçalhos de segurança no servidor, como: - Content-Security-Policy: Para controlar recursos carregados. - X-Frame-Options: Para prevenir clickjacking. - X-Content-Type-Options: Para evitar o tipo MIME.
+
+OWASP Top 10: A03:2021-Injection
+
+Severidade: 6.1 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N
+
+
+#5 Diretórios Sensíveis Detectados
+
+- Descrição: O diretório /index foi encontrado durante a varredura. Isso indica que o servidor pode conter outras estruturas acessíveis e sensíveis.
+
+- Impacto: Um atacante pode acessar ou enumerar diretórios sensíveis para explorar informações confidenciais. Assim, seria possível o roubo de dados e mapeamento da estrutura interna do servidor.
+
+- Mitigação:
+ - Configurar permissões corretas para os diretórios do servidor.
+ - Implementar listas de controle de acesso (ACL) e ocultar diretórios públicos desnecessários.
+ - Usar ferramentas para verificação periódica de exposição.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 5.4 (Média) CVSS:3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualizar o Servidor Apache (Crítico - Alta Prioridade)
+#2 Configurar Cabeçalhos de Segurança (Alta Prioridade)
+#3 Proteger o Serviço SMTP (Alta Prioridade)
+#4 Remover ou Substituir a Página Padrão do Apache (Média Prioridade)
+#5 Realizar Varredura de Diretórios Sensíveis (Média Prioridade)

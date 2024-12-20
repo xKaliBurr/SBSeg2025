@@ -1,0 +1,228 @@
+Site: http://dante.ufc.br/
+Performed at: 17/12/2024 - 13:55:04
+IP: 200.19.190.4
+whatweb:
+WhatWeb report for http://dante.ufc.br/
+Status    : 200 OK
+Title     : <None>
+IP        : 200.19.190.4
+Country   : BRAZIL, BR
+
+Summary   : Apache[2.2.16], HTTPServer[Debian Linux][Apache/2.2.16 (Debian)]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.2.16 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Debian Linux
+	String       : Apache/2.2.16 (Debian) (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Tue, 17 Dec 2024 17:13:11 GMT
+	Server: Apache/2.2.16 (Debian)
+	Last-Modified: Thu, 24 Mar 2011 20:17:10 GMT
+	ETag: "500002-b1-49f402982bd80"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 146
+	Connection: close
+	Content-Type: text/html
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.19.190.0 to 200.19.190.255
+[+] 	 PTR sheila.ufc.br 200.19.190.3
+[+] 	 PTR taiba.ufc.br 200.19.190.1
+[+] 	 PTR jeri4.ufc.br 200.19.190.11
+[+] 	 PTR jeri0.ufc.br 200.19.190.6
+[+] 	 PTR jeri3.ufc.br 200.19.190.10
+[+] 	 PTR dante.ufc.br 200.19.190.4
+[+] 	 PTR mel.ufc.br 200.19.190.2
+[+] 	 PTR correio1.ufc.br 200.19.190.8
+[+] 	 PTR www2.ufc.br 200.19.190.7
+[+] 	 PTR correio3.ufc.br 200.19.190.9
+[+] 	 PTR jeri5.ufc.br 200.19.190.12
+[+] 	 PTR jeri8.ufc.br 200.19.190.18
+[+] 	 PTR correio5.ufc.br 200.19.190.13
+[+] 	 PTR jeri9.ufc.br 200.19.190.19
+[+] 	 PTR jeri6.ufc.br 200.19.190.14
+[+] 	 PTR linha27.ufc.br 200.19.190.27
+[+] 	 PTR linha25.ufc.br 200.19.190.25
+[+] 	 PTR linha29.ufc.br 200.19.190.29
+[+] 	 PTR linha31.ufc.br 200.19.190.31
+[+] 	 PTR linha33.ufc.br 200.19.190.33
+[+] 	 PTR linha32.ufc.br 200.19.190.32
+[+] 	 PTR correio15.ufc.br 200.19.190.34
+[+] 	 PTR linha26.ufc.br 200.19.190.26
+[+] 	 PTR linha35.ufc.br 200.19.190.35
+[+] 	 PTR linha38.ufc.br 200.19.190.38
+[+] 	 PTR linha36.ufc.br 200.19.190.36
+[+] 	 PTR linha37.ufc.br 200.19.190.37
+[+] 	 PTR linha39.ufc.br 200.19.190.39
+[+] 	 PTR servicos.sti.ufc.br 200.19.190.41
+[+] 	 PTR linha40.ufc.br 200.19.190.40
+[+] 	 PTR linha42.ufc.br 200.19.190.42
+[+] 	 PTR linha43.ufc.br 200.19.190.43
+[+] 	 PTR linha44.ufc.br 200.19.190.44
+[+] 	 PTR linha46.ufc.br 200.19.190.46
+[+] 	 PTR linha45.ufc.br 200.19.190.45
+[+] 	 PTR linha47.ufc.br 200.19.190.47
+[+] 	 PTR linha49.ufc.br 200.19.190.49
+[+] 	 PTR linha48.ufc.br 200.19.190.48
+[+] 	 PTR linha50.ufc.br 200.19.190.50
+[+] 	 PTR linha51.ufc.br 200.19.190.51
+[+] 	 PTR linha52.ufc.br 200.19.190.52
+[+] 	 PTR linha53.ufc.br 200.19.190.53
+[+] 	 PTR linha54.ufc.br 200.19.190.54
+[+] 	 PTR linha55.ufc.br 200.19.190.55
+[+] 	 PTR linha56.ufc.br 200.19.190.56
+[+] 	 PTR linha57.ufc.br 200.19.190.57
+[+] 	 PTR linha58.ufc.br 200.19.190.58
+[+] 	 PTR linha59.ufc.br 200.19.190.59
+[+] 	 PTR linha60.ufc.br 200.19.190.60
+[+] 	 PTR linha62.ufc.br 200.19.190.62
+[+] 	 PTR linha63.ufc.br 200.19.190.63
+[+] 	 PTR linha64.ufc.br 200.19.190.64
+[+] 	 PTR si3.ufc.br 200.19.190.65
+[+] 	 PTR linha66.ufc.br 200.19.190.66
+[+] 	 PTR linha67.ufc.br 200.19.190.67
+[+] 	 PTR linha68.ufc.br 200.19.190.68
+[+] 	 PTR teste.ufca.br 200.19.190.70
+[+] 	 PTR linha71.ufc.br 200.19.190.71
+[+] 	 PTR linha72.ufc.br 200.19.190.72
+[+] 	 PTR linha73.ufc.br 200.19.190.73
+[+] 	 PTR linha74.ufc.br 200.19.190.74
+[+] 	 PTR linha76.ufc.br 200.19.190.76
+[+] 	 PTR linha75.ufc.br 200.19.190.75
+[+] 	 PTR linha79.ufc.br 200.19.190.79
+[+] 	 PTR linha80.ufc.br 200.19.190.80
+[+] 	 PTR linha82.ufc.br 200.19.190.82
+[+] 	 PTR linha81.ufc.br 200.19.190.81
+[+] 	 PTR linha83.ufc.br 200.19.190.83
+[+] 	 PTR linha84.ufc.br 200.19.190.84
+[+] 	 PTR linha85.ufc.br 200.19.190.85
+[+] 	 PTR linha86.ufc.br 200.19.190.86
+[+] 	 PTR linha87.ufc.br 200.19.190.87
+[+] 	 PTR linha88.ufc.br 200.19.190.88
+[+] 	 PTR linha89.ufc.br 200.19.190.89
+[+] 	 PTR linha90.ufc.br 200.19.190.90
+[+] 	 PTR jeri7.ufc.br 200.19.190.17
+[+] 	 PTR icapui.ufc.br 200.19.190.24
+[+] 	 PTR linha28.ufc.br 200.19.190.28
+[+] 	 PTR mucuripe.ufc.br 200.19.190.30
+[+] 	 PTR paraiso.ufc.br 200.19.190.100
+[+] 	 PTR linha101.ufc.br 200.19.190.101
+[+] 	 PTR linha104.ufc.br 200.19.190.104
+[+] 	 PTR linha102.ufc.br 200.19.190.102
+[+] 	 PTR linha103.ufc.br 200.19.190.103
+[+] 	 PTR linha106.ufc.br 200.19.190.106
+[+] 	 PTR linha105.ufc.br 200.19.190.105
+[+] 	 PTR linha107.ufc.br 200.19.190.107
+[+] 	 PTR linha108.ufc.br 200.19.190.108
+[+] 	 PTR linha112.ufc.br 200.19.190.112
+[+] 	 PTR linha109.ufc.br 200.19.190.109
+[+] 	 PTR mucuripe.ufc.br 200.19.190.110
+[+] 	 PTR linha113.ufc.br 200.19.190.113
+[+] 	 PTR linha111.ufc.br 200.19.190.111
+[+] 	 PTR linha115.ufc.br 200.19.190.115
+[+] 	 PTR linha116.ufc.br 200.19.190.116
+[+] 	 PTR linha117.ufc.br 200.19.190.117
+[+] 	 PTR linha118.ufc.br 200.19.190.118
+[+] 	 PTR linha119.ufc.br 200.19.190.119
+[+] 	 PTR linha61.ufc.br 200.19.190.61
+[+] 	 PTR linha69.ufc.br 200.19.190.69
+[+] 	 PTR linha77.ufc.br 200.19.190.77
+[+] 	 PTR linha78.ufc.br 200.19.190.78
+[+] 	 PTR sirius.nutec.ce.gov.br 200.19.190.173
+[+] 	 PTR linha114.ufc.br 200.19.190.114
+[+] 104 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for dante.ufc.br using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 14 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host dante.ufc.br:80 was resolved.
+* IPv6: (none)
+* IPv4: 200.19.190.4
+*   Trying 200.19.190.4:80...
+* Connected to dante.ufc.br (200.19.190.4) port 80
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: dante.ufc.br
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Tue, 17 Dec 2024 17:13:11 GMT
+< Server: Apache/2.2.16 (Debian)
+< Last-Modified: Thu, 24 Mar 2011 20:17:10 GMT
+< ETag: "500002-b1-49f402982bd80"
+< Accept-Ranges: bytes
+< Content-Length: 177
+< Vary: Accept-Encoding
+< Content-Type: text/html
+< X-Pad: avoid browser bug
+< 
+{ [177 bytes data]
+
+100   177  100   177    0     0  47099      0 --:--:-- --:--:-- --:--:-- 59000
+* Connection #0 to host dante.ufc.br left intact
+
+<html><body><h1>It works!</h1>
+<p>This is the default web page for this server.</p>
+<p>The web server software is running but no content has been added, yet.</p>
+</body></html>
+
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://dante.ufc.br
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   301,302,303,403,404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/index                (Status: 200) [Size: 177]
+===============================================================
+Finished
+===============================================================
+
+ports:
+25/tcp open  smtp    Postfix smtpd
+80/tcp open  http    Apache httpd 2.2.16 ((Debian))
+

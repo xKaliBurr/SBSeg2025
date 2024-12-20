@@ -1,0 +1,103 @@
+Site: http://200.19.182.102/
+
+potenciais vulnerabilidades:
+
+#1 Exposição de Informações no Cabeçalho HTTP
+
+- Descrição: O servidor revela informações sensíveis nos cabeçalhos HTTP, como: `Server: Microsoft-IIS/10.0` — Revele a versão do servidor web IIS e `X-Powered-By: ASP.NET` — Exposição do framework ASP.NET.
+  
+- Impacto: A exposição da versão do servidor e do framework facilita a identificação de vulnerabilidades específicas que podem ser exploradas por atacantes.
+
+- Mitigação: 
+  - Configurar o servidor para não revelar a versão do IIS e desativar o cabeçalho `X-Powered-By`. Isso pode ser feito nas configurações do IIS ou usando filtros HTTP.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#2 Página de Boas-Vindas Padrão do IIS
+
+- Descrição: O servidor exibe a página padrão do IIS contendo a mensagem 'PRÓ-REITORIA DE GRADUAÇÃO'. Essa página não é personalizada e revela a estrutura do servidor.
+
+- Impacto: A página de boas-vindas padrão pode ser um ponto de reconhecimento para os atacantes, fornecendo uma base para investigação sobre o servidor.
+
+- Mitigação: 
+  - Remover ou personalizar completamente a página padrão do IIS, substituindo-a por uma página genérica ou de erro.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#3 Ausência de Respostas para Subdomínios
+
+- Descrição: O scanner DNS não encontrou subdomínios específicos. Embora isso não represente uma vulnerabilidade direta, a falta de resposta pode ocultar informações adicionais sobre a infraestrutura interna do site.
+
+- Impacto: A falta de subdomínios não expostos minimiza o risco de exploração, mas ainda pode sugerir configurações de DNS que não estão sendo adequadamente gerenciadas ou podem ser alvo de vulnerabilidades de configuração.
+   
+- Mitigação: 
+  - Garantir que as configurações de DNS sejam revisadas e atualizadas regularmente para minimizar a exposição de subdomínios internos.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#4 Erros Internos de Servidor e Exposição de Cabeçalhos de Erro
+   
+- Descrição: Não há evidência direta de erros, mas, caso o servidor seja configurado de forma inadequada, ele pode expor mensagens de erro detalhadas, o que pode ajudar um atacante a entender melhor a arquitetura do sistema.
+
+- Impacto: A exposição de mensagens de erro detalhadas pode fornecer informações sensíveis sobre a infraestrutura do servidor, incluindo informações sobre o sistema operacional, frameworks e outros componentes.
+
+- Mitigação: 
+  - Implementar um sistema de tratamento de erros adequado para que mensagens de erro detalhadas não sejam enviadas para os usuários finais. Usar códigos de erro genéricos (como "500 Internal Server Error") e registrar erros internamente.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#5 Segurança das Portas de Comunicação
+
+- Descrição: O servidor tem as portas 80 (HTTP) e 443 (HTTPS) abertas, ambas usando Microsoft IIS 10.0. Embora a porta 443 seja segura, a porta 80 está exposta sem criptografia.
+
+- Impacto: A porta 80 (HTTP) está vulnerável a ataques de interceptação de tráfego (MITM), já que não usa criptografia. Isso pode permitir que dados sensíveis sejam comprometidos, além de expor a comunicação ao risco de downgrade para HTTP.
+
+- Mitigação: 
+  - Configurar o servidor para redirecionar automaticamente o tráfego da porta 80 para a porta 443 (HTTP para HTTPS) utilizando o HSTS (HTTP Strict Transport Security), garantindo que todas as comunicações sejam feitas de forma segura.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.1 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+#6 Verificação de Subdiretórios
+
+- Descrição: A varredura de diretórios feita com a ferramenta Gobuster foi usada para realizar uma verificação de diretórios e não encontrou subdiretórios no servidor.
+
+- Impacto: A ausência de subdiretórios significa que não foram encontrados pontos vulneráveis conhecidos, mas isso pode ser uma falha na configuração da ferramenta de varredura ou uma configuração segura no servidor. No entanto, se novos diretórios ou caminhos forem criados, é necessário garantir que eles estejam seguros.
+
+- Mitigação: 
+  - Realizar verificações regulares e implementar boas práticas de segurança para proteger diretórios sensíveis com controle de acesso adequado e filtragem de entradas.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Remover Exposição de Informações no Cabeçalho HTTP. Desabilitar a exibição de informações sensíveis nos cabeçalhos HTTP, como a versão do IIS e o cabeçalho `X-Powered-By`.
+
+#2 Customizar ou Remover a Página Padrão do IIS. Substituir a página padrão do IIS por uma página personalizada ou uma página de erro genérica.
+
+#3 Implementar Redirecionamento de HTTP para HTTPS. Configurar o servidor para forçar a utilização de HTTPS através de redirecionamento de tráfego da porta 80 (HTTP) para a porta 443 (HTTPS).
+
+#4 Ajustar Configurações de DNS e Subdomínios. Reavaliar as configurações de DNS para garantir que não haja informações sensíveis expostas e revisar a necessidade de expor subdomínios. Embora não tenha sido encontrado nenhum subdomínio, é importante garantir que configurações de DNS não revelem informações sobre a infraestrutura interna.
+
+#5 Configurar Tratamento de Erros Adequado. Configurar o servidor para não exibir mensagens de erro detalhadas aos usuários, exibindo apenas erros genéricos e registrando os detalhes internamente. Mensagens de erro detalhadas podem revelar informações sensíveis sobre a infraestrutura do servidor e facilitar ataques.
+
+
+

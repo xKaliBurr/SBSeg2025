@@ -1,0 +1,100 @@
+Site: http://200.19.182.106/
+
+potenciais vulnerabilidades:
+
+#1 Exposição de Informações do Servidor (Microsoft-IIS/10.0 e ASP.NET)
+
+- Descrição: O servidor revela informações detalhadas sobre a tecnologia utilizada, como a versão do Microsoft-IIS/10.0 e o uso do ASP.NET nos cabeçalhos HTTP (`X-Powered-By`).
+
+- Impacto: A exposição dessas informações facilita ataques direcionados, como exploração de vulnerabilidades conhecidas nas versões do IIS ou ASP.NET, especialmente se não forem atualizadas.
+
+- Mitigação: 
+  - Desabilitar ou ocultar informações de versão nos cabeçalhos HTTP (`X-Powered-By`, `Server`).
+  - Atualizar o IIS e ASP.NET para as versões mais recentes e seguras.
+  - Usar proxies reversos para filtrar e esconder essas informações.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#2 Página de Boas-Vindas Padrão do IIS
+
+- Descrição: O servidor está utilizando a página padrão de boas-vindas do IIS, o que pode indicar falta de configuração ou um sistema que não foi devidamente personalizado.
+
+- Impacto: A página padrão pode revelar detalhes sobre a configuração do servidor, o que facilita ataques de reconhecimento e exploração de vulnerabilidades no servidor IIS.
+
+- Mitigação: 
+  - Remover ou substituir a página de boas-vindas padrão do IIS por uma página customizada.
+  - Configurar corretamente o IIS para garantir que não sejam reveladas informações desnecessárias ao usuário final.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#3 Erro 500 no Diretório `/helpdesk`
+
+- Descrição: O diretório `/helpdesk` retorna um erro 500 (Internal Server Error), sugerindo que há falhas de configuração ou problemas no código.
+
+- Impacto: Erros internos podem ser explorados para realizar ataques como execução remota de código ou injeção de comandos, especialmente se o diretório contiver scripts vulneráveis.
+
+- Mitigação:
+  - Revisar e corrigir o código e a configuração do diretório `/helpdesk`.
+  - Implementar uma estratégia de **tratamento de erros** para evitar a exposição de detalhes internos ao público.
+  - Garantir que a aplicação seja robusta contra injeção e outros tipos de ataques.
+
+OWASP Top 10: A01:2021-Broken Access Control
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+#4 Falta de Cabeçalhos de Segurança HTTP
+
+- Descrição: O servidor não está configurado para enviar cabeçalhos de segurança recomendados, como Strict-Transport-Security (HSTS), X-Content-Type-Options, X-Frame-Options e Content-Security-Policy (CSP).
+
+- Impacto: A falta desses cabeçalhos expõe o servidor a uma variedade de ataques, como man-in-the-middle (MITM), clickjacking e cross-site scripting (XSS).
+
+- Mitigação:
+  - Configurar e aplicar cabeçalhos de segurança apropriados:
+    - Strict-Transport-Security (HSTS): Para garantir conexões HTTPS.
+    - X-Content-Type-Options: Para evitar a execução de conteúdo de tipo incorreto.
+    - X-Frame-Options: Para proteger contra clickjacking.
+    - Content-Security-Policy (CSP): Para mitigar riscos de XSS e injeção de conteúdo malicioso.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.1 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+#5 Exposição de Subdomínios
+
+- Descrição: A análise DNS revelou vários subdomínios dentro do domínio prograd.ufc.br, expondo informações sobre a estrutura interna da rede.
+
+- Impacto: A exposição de subdomínios pode ser explorada por atacantes para realizar ataques direcionados a outros serviços ou sistemas internos.
+
+- Mitigação:
+  - Utilizar técnicas de divulgação mínima para evitar expor subdomínios e endereços internos.
+  - Configurar o DNS de forma a não expor informações sensíveis e implementar listas negras de DNS para prevenir vazamentos.
+
+OWASP Top 10: A08:2021-Software and Data Integrity Failures
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+
+Ações Prioritárias
+
+#1 Ocultar Informações de Versão e Tecnologia. Configurar o servidor para não expor informações sensíveis nos cabeçalhos HTTP, como o `Server` (que revela a versão do IIS) e o `X-Powered-By` (que revela o uso de ASP.NET).
+   
+#2 Remover ou Substituir a Página de Boas-Vindas Padrão do IIS por uma página personalizada ou por um arquivo de erro genérico, sem informações sobre o servidor.
+
+#3 Corrigir o Erro 500 no Diretório `/helpdesk`. Investigar e corrigir os erros internos no diretório `/helpdesk`, que estão gerando erros 500.
+  
+#4 Aplicar Cabeçalhos de Segurança HTTP: Configurar e aplicar cabeçalhos de segurança recomendados, como: Strict-Transport-Security (HSTS) para forçar conexões seguras; X-Content-Type-Options para evitar a execução de conteúdo com tipos incorretos; X-Frame-Options para evitar ataques de clickjacking; Content-Security-Policy (CSP) para evitar XSS e injeção de conteúdo malicioso.
+
+#5 Revisar Configuração e Tratamento de Erros no Servidor. Implementar um sistema robusto de tratamento de erros para evitar a exposição de detalhes sensíveis em mensagens de erro, como o erro 500.xplorar o sistema.
+
+#6 Reduzir a Exposição de Subdomínios. Minimizar a exposição de subdomínios através de medidas como segregação de redes, controle de acesso e revisão das configurações de DNS para evitar que informações sobre subdomínios internos sejam vazadas.
+   
+#7 Realizar Atualizações Regulares de Sistema e Aplicativos. Garantir que todos os sistemas e aplicativos (incluindo IIS e ASP.NET) estejam atualizados para suas versões mais recentes e seguras.

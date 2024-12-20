@@ -1,0 +1,71 @@
+Site: http://www2.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Versão Desatualizada do Servidor Apache HTTP (2.2.22)
+
+- Descrição: O servidor web utiliza uma versão obsoleta do Apache (2.2.22), que não recebe mais atualizações de segurança e pode conter vulnerabilidades conhecidas.
+
+- Impacto: Ataques podem explorar falhas conhecidas nessa versão para comprometer o sistema, incluindo execução remota de código, negação de serviço (DoS) e escalonamento de privilégios
+
+- Mitigação:
+ - Atualizar o Apache para a versão mais recente suportada. Se a migração para a versão 2.4 não for viável, aplicar patches de segurança disponibilizados por fornecedores externos. 
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 7.5 (Alta) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
+
+
+#2 Configuração Genérica do Servidor HTTP
+
+- Descrição: O cabeçalho do servidor expõe informações detalhadas sobre a versão e o sistema operacional (Apache/2.2.22 (Debian)), o que facilita ataques direcionados.
+
+- Impacto: Um atacante pode usar essas informações para identificar vulnerabilidades específicas no software e sistema operacional.
+
+- Mitigação:
+ - Configurar o servidor para ocultar ou minimizar informações nos cabeçalhos HTTP (ServerTokens Prod e ServerSignature Off).
+
+OWASP Top 10: A01:2021-Broken Access Control
+
+Severidade: 5.3 (Média) CVSS 3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+
+
+#3 Porta 9102 Aberta com Serviço Indefinido (JetDirect?)
+
+- Descrição: Porta aberta que parece estar associada a um serviço não documentado. Pode ser um vetor de ataque se o serviço não estiver protegido ou for desnecessário.
+
+- Impacto: Ataques podem explorar a porta para acessar o serviço ou executar uma negação de serviço.
+
+- Mitigação:
+ - Realizar um inventário de serviços e desativar ou restringir o acesso a portas e serviços desnecessários. Monitorar logs para atividade suspeita.
+
+OWASP Top 10: A09:2021-Security Logging and Monitoring Failures 
+
+Severidade: 6.5 (Média) CVSS 3.0  AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
+
+
+
+#4 Sistema Exposto Sem Proteção Contra Manutenção
+
+- Descrição: O sistema expõe uma página indicando que está em manutenção, mas responde a requisições HTTP normais, permitindo coleta de informações e testes.
+
+- Impacto: Um atacante pode mapear o sistema e identificar vulnerabilidades, mesmo durante períodos de manutenção.
+
+- Mitigação:
+ - Utilizar mecanismos de proteção durante a manutenção, como autenticação básica ou restrição de acesso por IP.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 4.3 (Baixa) CVSS 3.0 AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualizar o Servidor Apache HTTP. A versão atual (2.2.22) está desatualizada e vulnerável a ataques conhecidos, com impacto potencialmente grave.
+
+#2 Configurar os Cabeçalhos HTTP para Ocultar Informações Sensíveis. Informações expostas nos cabeçalhos ajudam atacantes a identificar vulnerabilidades específicas.
+
+#3 Identificar e Monitorar a Porta 9102 (JetDirect?). Porta aberta sem documentação pode ser explorada como vetor de ataque.
+
+#4 Realizar Auditoria Completa de Serviços e Portas. Possíveis portas e serviços adicionais estão expostos, aumentando a superfície de ataque.

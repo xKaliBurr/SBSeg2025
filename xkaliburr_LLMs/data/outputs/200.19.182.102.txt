@@ -1,0 +1,166 @@
+Site: http://200.19.182.102/
+Performed at: 09/12/2024 - 12:25:35
+IP: 200.19.182.102
+whatweb:
+WhatWeb report for http://200.19.182.102/
+Status    : 200 OK
+Title     : PR�-REITORIA DE GRADUA��O
+IP        : 200.19.182.102
+Country   : BRAZIL, BR
+
+Summary   : HTTPServer[Microsoft-IIS/10.0], Microsoft-IIS[10.0], X-Powered-By[ASP.NET]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Thu, 28 Nov 2024 17:20:50 GMT
+	Accept-Ranges: bytes
+	ETag: "bc4f52dfb941db1:0"
+	Server: Microsoft-IIS/10.0
+	X-Powered-By: ASP.NET
+	Date: Mon, 09 Dec 2024 15:24:59 GMT
+	Connection: close
+	Content-Length: 733
+	
+
+reverse_dns:
+[*] Performing Reverse Lookup from 200.19.182.0 to 200.19.182.255
+[+] 	 PTR ariano.posmec.ufc.br 200.19.182.74
+[+] 	 PTR s98.prograd.ufc.br 200.19.182.98
+[+] 	 PTR s100.prograd.ufc.br 200.19.182.100
+[+] 	 PTR s99.prograd.ufc.br 200.19.182.99
+[+] 	 PTR s101.prograd.ufc.br 200.19.182.101
+[+] 	 PTR s103.prograd.ufc.br 200.19.182.103
+[+] 	 PTR s102.prograd.ufc.br 200.19.182.102
+[+] 	 PTR s104.prograd.ufc.br 200.19.182.104
+[+] 	 PTR s105.prograd.ufc.br 200.19.182.105
+[+] 	 PTR s106.prograd.ufc.br 200.19.182.106
+[+] 	 PTR s107.prograd.ufc.br 200.19.182.107
+[+] 	 PTR s108.prograd.ufc.br 200.19.182.108
+[+] 	 PTR s109.prograd.ufc.br 200.19.182.109
+[+] 	 PTR s110.prograd.ufc.br 200.19.182.110
+[+] 14 Records Found
+
+sub_dns:
+dnsmap 0.36 - DNS Network Mapper
+
+[+] searching (sub)domains for 200.19.182.102 using built-in wordlist
+[+] using maximum random delay of 10 millisecond(s) between requests
+
+[+] 0 (sub)domains and 0 IP address(es) found
+[+] completion time: 9 second(s)
+
+whois:
+Tempo esgotado.
+
+banner:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 200.19.182.102:80...
+* Connected to 200.19.182.102 (200.19.182.102) port 80
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 200.19.182.102
+> User-Agent: curl/8.10.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Content-Type: text/html
+< Last-Modified: Thu, 28 Nov 2024 17:20:50 GMT
+< Accept-Ranges: bytes
+< ETag: "bc4f52dfb941db1:0"
+< Server: Microsoft-IIS/10.0
+< X-Powered-By: ASP.NET
+< Date: Mon, 09 Dec 2024 15:24:59 GMT
+< Content-Length: 733
+< 
+{ [733 bytes data]
+
+100   733  100   733    0     0   145k      0 --:--:-- --:--:-- --:--:--  178k
+* Connection #0 to host 200.19.182.102 left intact
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>PR-REITORIA DE GRADUAO</title>
+<style type="text/css">
+<!--
+body {
+	color:#000000;
+	background-color:#B3B3B3;
+	margin:0;
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+a img {
+	border:none;
+}
+
+-->
+</style>
+</head>
+<body>
+<div id="container">
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<B> UNIVERSIDADE FEDERAL DO CEAR</B>
+<BR><BR>
+<B> SISTEMAS DA PR-REITORIA DE GRADUAO...</B>
+
+</div>
+</body>
+</html>
+
+directory_scan:
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://200.19.182.102
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Negative Status codes:   301,302,303,403,404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+===============================================================
+Finished
+===============================================================
+
+ports:
+80/tcp  open  http     Microsoft IIS httpd 10.0
+443/tcp open  ssl/http Microsoft IIS httpd 10.0
+

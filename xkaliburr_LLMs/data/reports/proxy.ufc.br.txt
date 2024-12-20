@@ -1,0 +1,105 @@
+Site: http://proxy.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Servidor Web Desatualizado
+
+- Descrição:  O servidor Apache identificado está na versão 2.2.22. Essa versão está obsoleta e possui vulnerabilidades conhecidas.
+
+- Impacto: Permite exploração de vulnerabilidades críticas, como execução remota de código, negação de serviço e comprometimento total do servidor.
+
+- Mitigação:
+ -  Atualizar para uma versão mais recente é essencial para mitigar riscos de exploração.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 9.8 (Crítica) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#2 PHP Desatualizado
+
+- Descrição: O PHP na versão 5.4.45-0+deb7u2 está em uso. Esta versão não é mais mantida e apresenta diversas vulnerabilidades críticas.
+
+- Impacto: Pode permitir execução remota de código, escalonamento de privilégios e exploração de vulnerabilidades conhecidas
+
+- Mitigação:
+ - Atualizar para uma versão suportada do PHP.
+ - Realizar auditorias regulares no ambiente PHP e nas dependências utilizadas.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 9.8 (Crítica) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#3 Sistema Operacional Base Vulnerável
+
+- Descrição: O servidor utiliza Debian com suporte para pacotes antigos, associado ao Apache e PHP desatualizados.
+
+- Impacto: Vulnerabilidades críticas no SO podem ser exploradas, comprometendo toda a infraestrutura. Além disso, a ausência de suporte dificulta a aplicação de patches de segurança.
+
+- Mitigação:
+ - Atualizar o sistema operacional para uma versão suportada.
+ - Manter um ciclo contínuo de atualizações de segurança no ambiente.
+
+OWASP Top 10: 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 8.6 (Alta) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+#4 Uso de Scripts e Bibliotecas Antigas
+
+- Descrição: Detecção do uso de jQuery e Bootstrap, que podem estar em versões antigas (detalhes não explicitados no relatório). Verificar a versão utilizada dessas bibliotecas para garantir que não possuem vulnerabilidades conhecidas.
+
+- Impacto: Scripts e bibliotecas desatualizados podem conter vulnerabilidades que permitem ataques como Cross-Site Scripting (XSS) e manipulação da interface do usuário.
+
+- Mitigação:
+ - Atualizar para as versões mais recentes das bibliotecas utilizadas.
+ - Adotar o uso de ferramentas de verificação de dependências (SCA).
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components
+
+Severidade: 6.5 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N
+
+
+
+#5 Possível Exploração via Reverse DNS
+		
+- Descrição: A análise do Reverse DNS revelou múltiplos subdomínios no mesmo bloco de IP. Caso as permissões não sejam adequadas, podem ser usados como vetores de ataque.
+
+- Impacto: Essa caracteristica pode permitir reconhecimento e exploração de subdomínios mal configurados, resultando em ataques direcionados e comprometimento de serviços.
+
+- Mitigação:
+ - Revisar configurações de segurança e acessos aos subdomínios detectados.
+ - Implementar políticas de controle de acesso para limitar interações indevidas entre subdomínios.
+
+OWASP Top 10: A01:2021-Broken Access Control 
+
+Severidade: 5.8 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
+
+
+#6 Falta de Implementação de Cabeçalhos de Segurança
+
+- Descrição: Nenhum cabeçalho de segurança (ex.: Content-Security-Policy, X-Frame-Options, etc.) foi detectado na análise HTTP.
+
+- Impacto: Facilita ataques como Cross-Site Scripting (XSS) e Clickjacking.
+
+- Mitigação:
+ - Configurar cabeçalhos de segurança adequados no servidor web.
+ - Realizar testes regulares de segurança no ambiente HTTP.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 6.1 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualização do Servidor Web Apache
+#2 Atualização do PHP
+#3 Atualização do Sistema Operacional
+#4 Verificação e Atualização de Scripts e Bibliotecas
+#5 Implementação de Cabeçalhos de Segurança
+#6 Revisão de Configurações do Reverse DNS e Subdomínios
+
+

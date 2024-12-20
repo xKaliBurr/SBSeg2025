@@ -1,0 +1,130 @@
+site: https://sistemas.prograd.ufc.br
+
+potenciais vulnerabilidades:
+
+#1 Exposição de Tecnologias Sensíveis
+
+- Descrição: O servidor está usando Microsoft-IIS/10.0 e está configurado com o cabeçalho `X-Powered-By: ASP.NET`. Essas informações podem ser usadas por atacantes para explorar vulnerabilidades conhecidas (Exploits).
+
+- Impacto: A exposição de informações sobre o servidor e a tecnologia facilita ataques direcionados, como exploração de vulnerabilidades específicas do IIS ou ASP.NET.
+
+- Mitigação:
+  - Remover ou mascarar os cabeçalhos `Server` e `X-Powered-By`.
+  - Utilizar técnicas de banner grabbing mitigation para evitar a detecção do software do servidor.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 5.3 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#2 Falta de Segurança nos Cookies
+
+- Descrição: Nenhuma menção a cookies seguros (`Secure`, `HttpOnly`, `SameSite`) foi detectada no relatório.
+
+- Impacto: Cookies inseguros podem ser capturados em conexões não criptografadas ou explorados em ataques como Cross-Site Scripting (XSS).
+
+- Mitigação:
+  - Configurar cookies com as flags `Secure`, `HttpOnly` e `SameSite`.
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 7.5 (Alta) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#3 Certificado SSL
+
+- Descrição: O certificado SSL está configurado corretamente, com validade até 30 de dezembro de 2025, mas o servidor não suporta HSTS (HTTP Strict Transport Security).
+  
+- Impacto: Sem HSTS, o site pode estar vulnerável a ataques de downgrade, como SSL Strip, que forçam o uso de conexões HTTP inseguras.
+
+- Mitigação:
+  - Configurar o cabeçalho `Strict-Transport-Security` para forçar conexões HTTPS.
+  - Garantir suporte a protocolos modernos de criptografia.
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 5.9 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#4 Possível Falha no Charset
+
+- Descrição: O charset da página está configurado como `ISO-8859-1`, mas há evidências de problemas com caracteres especiais, como "PR-REITORIA DE GRADUAO".
+
+- Impacto: A incompatibilidade de codificação pode prejudicar a experiência do usuário e indicar falhas de configuração no servidor.
+
+- Mitigação:
+  - Configurar o charset para `UTF-8` no cabeçalho HTTP e no HTML.
+  - Verificar a consistência dos arquivos do sistema com a codificação esperada.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 4.3 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N
+
+
+#5 Falta de Detecção em Diretórios Sensíveis
+
+- Descrição: A varredura de diretórios não identificou pastas ou endpoints adicionais (nenhum diretório listado no Gobuster). Isso pode significar: Diretórios escondidos por mecanismos de segurança. Ausência de mapeamento adequado para o escopo de testes.
+  
+- Impacto: Diretórios sensíveis podem estar acessíveis caso não estejam protegidos adequadamente.
+
+- Mitigação:
+  - Revisar configurações de segurança no servidor para garantir que pastas não autorizadas estejam protegidas.
+  - Utilizar ferramentas como Burp Suite ou DirBuster para uma análise mais profunda.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 4.8 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
+
+
+#6 Configurações de Portas de Rede
+
+- Descrição: As portas 80 (HTTP) e 443 (HTTPS) estão abertas e configuradas para o servidor IIS. A porta 80 (HTTP) deve redirecionar automaticamente para HTTPS.
+  
+- Impacto: O uso de HTTP pode expor conexões inseguras, facilitando ataques de interceptação.
+
+- Mitigação:
+  - Configurar redirecionamento automático de HTTP para HTTPS em todas as solicitações.
+  - Monitorar regularmente as portas abertas e verificar por serviços desnecessários.
+
+OWASP Top 10: A02:2021-Cryptographic Failures
+
+Severidade: 7.5 (Alta) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+
+#7 Logs e DNS Reverso
+
+- Descrição: Foram encontrados diversos subdomínios no DNS reverso, como: `s98.prograd.ufc.br`, `s99.prograd.ufc.br`, `s102.prograd.ufc.br`, entre outros.
+  
+- Impacto: Subdomínios expostos podem indicar pontos adicionais para exploração, especialmente se não forem devidamente protegidos.
+
+- Mitigação:
+  - Realizar auditorias em subdomínios detectados.
+  - Implementar regras de segurança específicas em cada subdomínio.
+
+OWASP Top 10: A05:2021-Security Misconfiguration
+
+Severidade: 3.7 (Baixa) CVSS:3.0 AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
+
+
+#8 Falta de Mecanismos de Defesa Adicionais
+
+- Descrição: Não há menções a: Firewalls de aplicação web (WAF) ou mecanismos de proteção contra ataques como CSRF e XSS.
+  
+- Impacto: Ataques de injeção e manipulação de requisições podem comprometer o servidor e os dados.
+
+- Mitigação:
+  - Adicionar WAF para filtrar tráfego malicioso.
+  - Implementar validação de entrada e proteção contra XSS em todas as entradas do usuário.
+
+OWASP Top 10: A03:2021-Injection
+
+Severidade: 9.1 (Alta) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
+
+
+
+Ações Prioritárias
+
+#1 Configuração de Segurança no IIS: Remover cabeçalhos desnecessários e implementar HSTS.
+#2 Proteção de Subdomínios: Realizar auditorias e proteger endpoints sensíveis.
+#3 Atualização de Certificados e Charset: Garantir compatibilidade com `UTF-8` e reforçar a criptografia.
+#4 Melhorar Detecção de Diretórios: Revisar permissões de acesso e proteção.

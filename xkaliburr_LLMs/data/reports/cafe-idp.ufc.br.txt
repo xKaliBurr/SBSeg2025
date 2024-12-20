@@ -1,0 +1,74 @@
+Site: http://cafe-idp.ufc.br/
+
+potenciais vulnerabilidades:
+
+#1 Redirecionamento HTTP
+
+- Descrição: O servidor redireciona conexões HTTP para HTTPS (301 Moved Permanently). Embora esse comportamento seja esperado para garantir o uso de HTTPS, um redirecionamento mal configurado ou interceptável pode ser explorado em ataques de redirecionamento malicioso.
+
+- Impacto: Ataques como "Downgrade Attacks" ou exploração de redirecionamentos maliciosos podem ser usados para capturar informações sensíveis. Este risco aumenta se o HTTPS não for adequadamente implementado ou suportar versões inseguras de TLS.
+
+- Mitigação:
+ - Garantir que o redirecionamento seja direto e seguro.
+ - Usar HTTPS para todas as comunicações.
+ - Configurar o cabeçalho Strict-Transport-Security com valores adequados (já implementado no servidor analisado).
+
+OWASP Top 10: A05:2021 – Security Misconfiguration
+
+Severidade: 5.3 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
+
+
+#2 Configuração de Segurança nos Cabeçalhos HTTP
+
+- Descrição: O servidor utiliza cabeçalhos de segurança como Strict-Transport-Security e X-Frame-Options. No entanto, não foram detectados outros cabeçalhos recomendados, como Content-Security-Policy (CSP) e X-Content-Type-Options.
+
+- Impacto: A ausência de certos cabeçalhos pode deixar o sistema vulnerável a ataques como injeções de scripts (XSS) e manipulação de conteúdo.
+
+- Mitigação:
+ - Implementar o cabeçalho Content-Security-Policy para mitigar ataques XSS.
+ - Adicionar o cabeçalho X-Content-Type-Options: nosniff para evitar a execução de arquivos interpretados incorretamente.
+ - Verificar regularmente a configuração dos cabeçalhos para assegurar que estejam atualizados.
+
+OWASP Top 10: A05:2021-Security Misconfiguration 
+
+Severidade: 6.5 (Média) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
+
+
+#3 Uso de Software Desatualizado: Joomla 3.10.11
+
+- Descrição: A versão do CMS Joomla detectada (3.10.11) não é a mais recente. CMS desatualizados frequentemente contêm vulnerabilidades conhecidas que podem ser exploradas por atacantes.
+
+- Impacto: Se explorado, pode resultar em comprometimento total do sistema, exfiltração de dados ou inserção de backdoors.
+
+- Mitigação:
+ - Atualizar o Joomla para a versão mais recente.
+ - Monitorar regularmente por atualizações de segurança e aplicá-las de forma imediata.
+ - Realizar auditorias de segurança no CMS e seus plugins.
+
+OWASP Top 10: A06:2021-Vulnerable and Outdated Components 
+
+Severidade: 9.8 (Crítica) CVSS:3.0 AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+
+
+#4 Cookies Sem Proteção Avançada
+
+- Descrição: O cookie c58392a6afe5823150836ac5708bfd7d possui a flag HttpOnly, mas não há evidência de flags como Secure ou SameSite.
+
+- Impacto: A falta dessas proteções pode expor o cookie a ataques como session hijacking e cross-site request forgery (CSRF).
+
+- Mitigação:
+ - Adicionar a flag Secure aos cookies para evitar que sejam transmitidos em conexões não seguras.
+ - Configurar a flag SameSite para evitar que cookies sejam enviados em solicitações cross-site.
+
+OWASP Top 10: A07:2021-Identification and Authentication Failures 
+
+Severidade: 5.9 (Média) CVSS:3.0 AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
+
+
+
+Ações Prioritárias:
+
+#1 Atualizar o Joomla e demais componentes do sistema.
+#2 Implementar os cabeçalhos de segurança recomendados.
+#3 Revisar as configurações de cookies para adicionar flags de proteção.
+#4 Realizar testes adicionais de segurança para validar redirecionamentos e configurações de HTTPS.
